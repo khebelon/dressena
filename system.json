@@ -1,0 +1,25 @@
+{
+	"name": "dressena",
+	"title": "Dressena System",
+	"description": "System to play Khebelon Empire",
+	"author": "Pablo M. F. Duboé",
+	"version": 0.1,
+	"minimumCoreVersion": "11.315",
+	"compatibleCoreVersion": "11.315",
+	"esmodules": [
+		"dressena.js"
+	],
+	"styles": [
+		"dressena.css"
+	],
+	"packs": [
+
+	],
+	"languages": [
+
+	],
+	"gridDistance": 5,
+	"gridUnits": "ft",
+	"primaryTokenAttribute": "health",
+	"initiative": "1d20 + @valor"
+}
