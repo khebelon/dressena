@@ -5,7 +5,6 @@
 	"author": "Pablo M. F. Duboé",
 	"license": "LICENSE.txt",
 	"version": "0.1",
-	"coreVersion": "11.315",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11.315"
