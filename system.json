@@ -21,5 +21,7 @@
 	"gridDistance": 5,
 	"gridUnits": "ft",
 	"primaryTokenAttribute": "health",
-	"initiative": "1d20 + @valor"
+	"initiative": "1d20 + @valor",
+	"url": "https://github.com/khebelon/dressena/",
+    "manifest": "https://raw.githubusercontent.com/khebelon/dressena/master/system.json"
 }
