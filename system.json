@@ -30,5 +30,6 @@
 	"packFolders": [],
 	"socket": false,
 	"url": "https://github.com/khebelon/dressena/",
-    "manifest": "https://raw.githubusercontent.com/khebelon/dressena/master/system.json"
+    "manifest": "https://raw.githubusercontent.com/khebelon/dressena/master/system.json",
+	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.1.zip"
 }
