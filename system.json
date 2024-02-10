@@ -4,7 +4,7 @@
 	"description": "System to play Khebelon Empire",
 	"author": "Pablo M. F. Duboe",
 	"license": "LICENSE.txt",
-	"version": "0.1",
+	"version": "0.2",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11.315"
