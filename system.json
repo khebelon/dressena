@@ -1,11 +1,21 @@
 {
-	"name": "dressena",
+	"id": "dressena",
 	"title": "Dressena System",
 	"description": "System to play Khebelon Empire",
 	"author": "Pablo M. F. Duboé",
+	"license": "LICENSE.txt",
 	"version": 0.1,
-	"minimumCoreVersion": "11.315",
-	"compatibleCoreVersion": "11.315",
+	"compatibility": {
+		"minimum": 11,
+		"verified": "11.315"
+	  },
+	"languages": [
+		{
+		  "lang": "en",
+		  "name": "English",
+		  "path": "lang/en.json"
+		}
+	  ],  
 	"esmodules": [
 		"dressena.js"
 	],
@@ -13,9 +23,6 @@
 		"dressena.css"
 	],
 	"packs": [
-
-	],
-	"languages": [
 
 	],
 	"gridDistance": 5,
