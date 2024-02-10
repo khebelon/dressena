@@ -26,8 +26,6 @@
 	"gridUnits": "ft",
 	"primaryTokenAttribute": "health",
 	"initiative": "1d20 + @valor",
-	"packs": [],
-	"packFolders": [],
 	"socket": false,
 	"url": "https://github.com/khebelon/dressena/",
     "manifest": "https://raw.githubusercontent.com/khebelon/dressena/main/system.json",
