@@ -3,4 +3,21 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "dressena.armor.armorBonus"}}</th>
+                <th>{{localize "dressena.armor.stealthReduction"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="system.armorBonus" type="text" value="{{system.armorBonus}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="system.stealthReduction" type="text" value="{{system.stealthReduction}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        <textarea name="system.description">{{system.description}}</textarea>
+    </div>
 </form>

@@ -1,4 +1,4 @@
-import { dressena } from ".module/config.js";
+import { dressena } from "./module/config.js";
 import dressenaItemSheet from "./module/sheets/dressenaItemSheet.js";
 
 Hooks.once("init", function() {

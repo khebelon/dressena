@@ -1,12 +1,25 @@
 export default class dressenaItemSheet extends ItemSheet {
     get template() {
-        return `systems/dressena/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/dressena/templates/sheets/${this.item.type}-sheet.html`;
     }
 
-    get data() {
-        const data = super.getData();
-        data.config = CONFIG.dressena;
-        return data;
+    getData() {
+        // Retrieve base data structure.
+        const context = super.getData();
+
+        // Use a safe clone of the item data for further operations.
+        const itemData = context.data;
+        context.config = CONFIG.dressena;
+
+        // Retrieve the roll data for TinyMCE editors.
+        context.rollData = this.item.getRollData();
+
+        // Add the item's data to context.data for easier access, as well as flags.
+        context.system = itemData.system;
+        context.flags = itemData.flags;
+
+        return context;
     }
 
-}
+
+    }

@@ -12,8 +12,8 @@
             </tr>
             <tr>
                 <td>
-                    <select name="data.attackWith">
-                        {{#select data.attackWith}}
+                    <select name="system.attackWith">
+                        {{#select system.attackWith}}
                         {{#each config.attackTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -21,13 +21,13 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
+                    <input name="system.damage" type="text" value="{{system.damage}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <input name="data.experienceBonus" type="text" value="{{data.experienceBonus}}" data-dtype="Number" />
+                    <input name="system.experienceBonus" type="text" value="{{system.experienceBonus}}" data-dtype="Number" />
                 </td>
             </tr>
         </table>
-        <textarea name="data.description">{{data.description}}</textarea>
+        <textarea name="system.description">{{system.description}}</textarea>
     </div>
 </form>

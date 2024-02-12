@@ -12,6 +12,10 @@
         "attackWith": "Attack with:",
         "damage": "Damage",
         "experienceBonus": "Experience Bonus"        
+    },
+    "armor": {
+        "armorBonus": "Armor Bonus",
+        "stealthReduction": "Stealth Reduction"      
     }
 
 }
