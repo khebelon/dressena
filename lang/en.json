@@ -7,7 +7,11 @@
         "devout": "Ego",
         "throwable": "Fine Motor",
         "scholar": "Metaphysics"
-
+    },
+    "weapon": {
+        "attackWith": "Attack with:",
+        "damage": "Damage",
+        "experienceBonus": "Experience Bonus"        
     }
 
 }
