@@ -3,5 +3,31 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
-    <p>PRUEBA</p>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "dressena.weapon.attackWith"}}</th>
+                <th>{{localize "dressena.weapon.damage"}}</th>
+                <th>{{localize "dressena.weapon.experienceBonus"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.attackWith">
+                        {{#select data.attackWith}}
+                        {{#each config.attackTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.experienceBonus" type="text" value="{{data.experienceBonus}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        <textarea name="data.description">{{data.description}}</textarea>
+    </div>
 </form>

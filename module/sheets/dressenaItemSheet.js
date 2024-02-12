@@ -3,6 +3,10 @@ export default class dressenaItemSheet extends ItemSheet {
         return `systems/dressena/templates/sheets/${this.item.data.type}-sheet.html`;
     }
 
-
+    get data() {
+        const data = super.getData();
+        data.config = CONFIG.dressena;
+        return data;
+    }
 
 }

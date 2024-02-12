@@ -111,13 +111,16 @@
         "weapon": {
             "templates": ["base"],
             "attackWith": "meleeWeaponHandling",
-            "damage": 0
+            "damage": 0,
+            "experienceBonus": 0
         },
         "trait": {
             "templates": ["base"]
           },
         "armor": {
-            "templates": ["base"]
+            "templates": ["base"],
+            "armorBonus": 0,
+            "stealthReduction": 0
           },
         "spell": {
             "templates": ["base"]

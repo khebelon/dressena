@@ -1,0 +1,16 @@
+{
+"dressena": {
+    "attack": {
+        "none": "",
+        "melee": "Melee Weapon",
+        "ranged": "Ranged Weapon",
+        "devout": "Ego",
+        "throwable": "Fine Motor",
+        "scholar": "Metaphysics"
+
+    }
+
+}
+
+
+}
