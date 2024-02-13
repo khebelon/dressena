@@ -2,6 +2,54 @@
   display: flex;
   flex-direction: column;
 }
+.sheet .armor-sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sheet .armor-sheet-content .editor {
+  height: 100%;
+}
+.sheet form {
+  display: flex;
+  flex-direction: column;
+}
+.sheet .item-sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sheet .item-sheet-content .editor {
+  height: 100%;
+}
+.sheet form {
+  display: flex;
+  flex-direction: column;
+}
+.sheet .spell-sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sheet .spell-sheet-content .editor {
+  height: 100%;
+}
+.sheet form {
+  display: flex;
+  flex-direction: column;
+}
+.sheet .trait-sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sheet .trait-sheet-content .editor {
+  height: 100%;
+}
+.sheet form {
+  display: flex;
+  flex-direction: column;
+}
 .sheet .weapon-sheet-content {
   height: 100%;
   display: flex;
