@@ -8,6 +8,10 @@
             <tr>
                 <th>{{localize "dressena.item.quantity"}}</th>
             </tr>
+                <td>
+                    <input name="system.quantity" type="text" value="{{system.quantity}}" data-dtype="Number" />
+                </td>
+            </tr>
         </table>
         {{editor system.description target="system.description" button=true owner=owner editable=editable}}
     </div>
