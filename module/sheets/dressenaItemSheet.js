@@ -1,4 +1,13 @@
 export default class dressenaItemSheet extends ItemSheet {
+
+    static get defaultOptions() {
+        return mergeObject(super.defaultOptions, {
+            width: 530,
+            height:340,
+            classes: ["dressena", "sheet", "item"]
+        })
+    }
+
     get template() {
         return `systems/dressena/templates/sheets/${this.item.type}-sheet.html`;
     }
