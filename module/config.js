@@ -8,3 +8,28 @@ dressena.attackTypes = {
     throwable: "dressena.attack.throwable",
     scholar: "dressena.attack.scholar"
 }
+
+dressena.abilities = {
+    meleeWeaponHandling: "dressena.ability.meleeWeaponHandling", 
+    health:"dressena.ability.health",
+    endurance: "dressena.ability.endurance",
+    rangedWeaponHandling: "dressena.ability.rangedWeaponHandling",
+    agility: "dressena.ability.agility",
+    fineMotor: "dressena.ability.fineMotor",
+    stealth: "dressena.ability.stealth",
+    exteriorWorld: "dressena.ability.exteriorWorld",
+    logic: "dressena.ability.logic",
+    suggestion: "dressena.ability.suggestion",
+    combatStrategy: "dressena.ability.combatStrategy",
+    metaphysics: "dressena.ability.metaphysics",
+    survival: "dressena.ability.survival",
+    encyclopedia: "dressena.ability.encyclopedia",
+    ethics: "dressena.ability.ethics",
+    painThreshold: "dressena.ability.painThreshold",
+    valor: "dressena.ability.valor",
+    rhetoric: "dressena.ability.rhetoric",
+    volition: "dressena.ability.volition",
+    authority: "dressena.ability.authority",
+    occultism: "dressena.ability.occultism",
+    ego: "dressena.ability.ego"
+}

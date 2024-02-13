@@ -16,6 +16,34 @@
     "armor": {
         "armorBonus": "Armor Bonus",
         "stealthReduction": "Stealth Reduction"      
+    },
+    "ability": {
+        "meleeWeaponHandling": "Melee Weapon Handling", 
+        "health":"Health",
+        "endurance": "Endurance",
+        "rangedWeaponHandling": "Range Weapon Handling",
+        "agility": "Agility",
+        "fineMotor": "Fine Motor",
+        "stealth": "Stealth",
+        "exteriorWorld": "Exterior World",
+        "logic": "Logic",
+        "suggestion": "Suggestion",
+        "combatStrategy": "Combat Strategy",
+        "metaphysics": "Metaphysics",
+        "survival": "Survival",
+        "encyclopedia": "Encyclopedia",
+        "ethics": "Ethics",
+        "painThreshold": "Pain Threshold",
+        "valor": "Valor",
+        "rhetoric": "Rhetoric",
+        "volition": "Volition",
+        "authority": "Authority",
+        "occultism": "Occultism",
+        "ego": "Ego"
+    },
+    "trait": {
+        "improvedAbility": "Improved Ability",
+        "traitBonus": "Trait Ability Bonus"
     }
 
 }

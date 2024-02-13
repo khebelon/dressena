@@ -115,7 +115,9 @@
             "experienceBonus": 0
         },
         "trait": {
-            "templates": ["base"]
+            "templates": ["base"],
+            "improvedAbility": "meleeWeaponHandling",
+            "traitBonus": 0
           },
         "armor": {
             "templates": ["base"],

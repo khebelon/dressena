@@ -29,5 +29,5 @@
 	"socket": false,
 	"url": "https://github.com/khebelon/dressena/",
     "manifest": "https://raw.githubusercontent.com/khebelon/dressena/main/system.json",
-	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.3.zip"
+	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.4.zip"
 }
