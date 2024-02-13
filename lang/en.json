@@ -44,7 +44,24 @@
     "trait": {
         "improvedAbility": "Improved Ability",
         "traitBonus": "Trait Ability Bonus"
+    },
+    "spellAttackWith": {
+        "ego": "Ego",
+        "metaphysics": "Metaphysics"
+    },
+    "AttackAgainst": {
+        "defense": "Defense",
+        "volition": "Volition",
+        "exteriorWorld": "Exterior World",
+        "painThreshold": "Pain Threshold"
+    },
+    "spell": {
+        "attackWith": "Attack with:",
+        "attackAgainst": "Attack Against",
+        "damage": "Damage"
+    },
+    "item": {
+        "quantity": "Quantity"
     }
-
 }
 }

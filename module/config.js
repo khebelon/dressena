@@ -8,7 +8,6 @@ dressena.attackTypes = {
     throwable: "dressena.attack.throwable",
     scholar: "dressena.attack.scholar"
 }
-
 dressena.abilities = {
     meleeWeaponHandling: "dressena.ability.meleeWeaponHandling", 
     health:"dressena.ability.health",
@@ -32,4 +31,17 @@ dressena.abilities = {
     authority: "dressena.ability.authority",
     occultism: "dressena.ability.occultism",
     ego: "dressena.ability.ego"
+}
+dressena.spellAttackTypes = {
+    ego: "dressena.spellAttackWith.ego",
+    metaphysics: "dressena.spellAttackWith.metaphysics"
+}
+dressena.attackAgainst = {
+    defense: "dressena.AttackAgainst.defense",
+    volition: "dressena.AttackAgainst.volition",
+    exteriorWorld: "dressena.AttackAgainst.exteriorWorld",
+    painThreshold: "dressena.AttackAgainst.painThreshold",
+}
+dressena.item = {
+    quantity: "dressena.item.quantity"
 }

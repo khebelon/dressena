@@ -1,0 +1,8 @@
+{
+    "less.compile": {
+        
+        "main": "dressena.less",
+        "out": "../"
+
+    }
+}
