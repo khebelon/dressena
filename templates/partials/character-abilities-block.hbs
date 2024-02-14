@@ -1,9 +1,36 @@
-<section class="ability-block">
-  <label class="stat-name">
-    {{localize "dressena.ability.meleeWeaponHandling"}}
-  </label>
-  <div class="stat-value reveal-rollable">
-    <input name="system.meleeWeaponHandling" type="text" value="{{system.meleeWeaponHandling}}" data-dtype="Number" />
-  </div>
+<section class="physics-block">
+    <ul class="physics-list">
+        <li>
+            {{localize "dressena.ability.meleeWeaponHandling"}}
+            <input name="system.meleeWeaponHandling" value="{{system.meleeWeaponHandling}}" data-dtype="Number">
+        </li>
+        <li>
+            {{localize "dressena.ability.health"}}
+            <input name="system.health.value" value="{{system.health.value}}" data-dtype="Number">
+        </li>
+        <li>
+            {{localize "dressena.ability.endurance"}}
+            <input name="system.endurance" value="{{system.endurance}}" data-dtype="Number">
+        </li>
+        </ul>
 </section>
-
+<section class="finesse-block">      
+        <ul class="finesse-list">
+            <li>
+                {{localize "dressena.ability.rangedWeaponHandling"}}
+                <input name="system.rangedWeaponHandling" value="{{system.rangedWeaponHandling}}" data-dtype="Number">
+            </li>
+            <li>
+                {{localize "dressena.ability.agility"}}
+                <input name="system.agility" value="{{system.agility}}" data-dtype="Number">
+            </li>
+            <li>
+                {{localize "dressena.ability.fineMotor"}}
+                <input name="system.fineMotor" value="{{system.fineMotor}}" data-dtype="Number">
+            </li>
+            <li>
+                {{localize "dressena.ability.stealth"}}
+                <input name="system.stealth" value="{{system.stealth}}" data-dtype="Number">
+            </li>
+            </ul>
+</section>
