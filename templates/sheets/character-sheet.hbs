@@ -9,6 +9,10 @@
         <div class="abilities">
             {{> "systems/dressena/templates/partials/character-abilities-block.hbs"}}
         </div>
-
+        <div class="weapon-list">
+            {{#each weapons as |weapon id|}}
+            {{> "systems/dressena/templates/partials/weapon-card.hbs" weapon}}
+            {{/each}}
+        </div>
     </div>
 </form>
