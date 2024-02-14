@@ -58,3 +58,10 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
+.sheet form {
+  display: flex;
+  flex-direction: column;
+}
+.sheet .sheet-physics-list {
+  border: solid 3px;
+}
