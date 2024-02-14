@@ -1,103 +1,49 @@
 {
     "Actor":{
-        "types": ["character", "npc"],
+        "types": ["warrior", "hunter", "criminal", "devout", "scholar"],
         "templates": {
-            "base": {
-                "meleeWeaponHandling": {
-                    "value": 1,
-                    "max": 10
-                },
+            "abilities": {
+                "meleeWeaponHandling": 1,
                 "health": {
-                    "value": 10,
-                    "max": 10
+                    "value": 15,
+                    "max": 15 
                 },
-                "endurance": {
-                    "value": 1,
-                    "max": 10
-                },
-                "rangedWeaponHandling": {
-                    "value": 1,
-                    "max": 10
-                },
-                "agility": {
-                    "value": 1,
-                    "max": 10
-                },
-                "fineMotor": {
-                    "value": 1,
-                    "max": 10
-                },
-                "stealth": {
-                    "value": 1,
-                    "max": 10
-                },
-                "exteriorWorld": {
-                    "value": 1,
-                    "max": 10
-                },
-                "logic": {
-                    "value": 1,
-                    "max": 10
-                },
-                "suggestion": {
-                    "value": 1,
-                    "max": 10
-                },
-                "combatStrategy": {
-                    "value": 1,
-                    "max": 10
-                },
-                "metaphysics": {
-                    "value": 1,
-                    "max": 10
-                },
-                "survival": {
-                    "value": 1,
-                    "max": 10
-                },
-                "encyclopedia": {
-                    "value": 1,
-                    "max": 10
-                },
-                "ethics": {
-                    "value": 1,
-                    "max": 10
-                },
-                "painThreshold": {
-                    "value": 1,
-                    "max": 10
-                },
-                "valor": {
-                    "value": 1,
-                    "max": 10
-                },
-                "rhetoric": {
-                    "value": 1,
-                    "max": 10
-                },
-                "volition": {
-                    "value": 1,
-                    "max": 10
-                },
-                "authority": {
-                    "value": 1,
-                    "max": 10
-                },
-                "occultism": {
-                    "value": 1,
-                    "max": 10
-                },
-                "ego": {
-                    "value": 1,
-                    "max": 10
-                }
+                "endurance": 1,
+                "rangedWeaponHandling": 1,
+                "agility": 1,
+                "fineMotor": 1,
+                "stealth": 1,
+                "exteriorWorld": 1,
+                "logic": 1,
+                "suggestion": 1,
+                "combatStrategy": 1,
+                "metaphysics": 1,
+                "survival": 1,
+                "encyclopedia": 1,
+                "ethics": 1,
+                "painThreshold": 1,
+                "valor": 1,
+                "rhetoric": 1,
+                "volition": 1,
+                "authority": 1,
+                "occultism": 1,
+                "ego": 3
             }
         },
-        "character": {
-                "templates": ["base"]
+        "warrior": {
+                "templates": ["abilities"]
             },
-        "npc": {
-                "templates": ["base"]
+        "hunter": {
+                "templates": ["abilities"]
+            },            
+        "criminal": {
+                "templates": ["abilities"]
+            },            
+        "devout": {
+                "templates": ["abilities"]
+            },            
+        "scholar": {
+                "templates": ["abilities"]
             }
         },
 

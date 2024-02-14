@@ -1,0 +1,14 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="sidebar">
+        <h1 class="class">
+            <div data-edit="system.type" contenteditable>
+                {{system.type}}
+            </div>
+        </h1>
+        <img src="{{actor.img}}" data-edit="img" title:"{{actor.name}}"/>
+        <div class="abilities">
+            {{> "systems/dressena/templates/partials/character-abilities-block.hbs"}}
+        </div>
+
+    </div>
+</form>
