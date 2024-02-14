@@ -21,7 +21,7 @@
         "meleeWeaponHandling": "Melee Weapon Handling", 
         "health":"Health",
         "endurance": "Endurance",
-        "rangedWeaponHandling": "Range Weapon Handling",
+        "rangedWeaponHandling": "Ranged Weapon Handling",
         "agility": "Agility",
         "fineMotor": "Fine Motor",
         "stealth": "Stealth",
@@ -39,7 +39,8 @@
         "volition": "Volition",
         "authority": "Authority",
         "occultism": "Occultism",
-        "ego": "Ego"
+        "ego": "Ego",
+        "defense": "Defense"
     },
     "trait": {
         "improvedAbility": "Improved Ability",

@@ -30,7 +30,8 @@ dressena.abilities = {
     volition: "dressena.ability.volition",
     authority: "dressena.ability.authority",
     occultism: "dressena.ability.occultism",
-    ego: "dressena.ability.ego"
+    ego: "dressena.ability.ego",
+    defense: "dressena.ability.defense"
 }
 dressena.spellAttackTypes = {
     ego: "dressena.spellAttackWith.ego",

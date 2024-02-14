@@ -58,10 +58,49 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
+.sheet {
+  /*    .sheet-physics-list {
+        border: solid 3px;
+        border-color: rgb(174, 83, 83);
+        background-color: rgb(174, 83, 83);
+    }*/
+}
 .sheet form {
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-physics-list {
+.sheet .sheet-physics-block > ul {
+  list-style: none;
+  padding: 0 1rem 0.75rem;
+  margin: 0;
+}
+.sheet .sheet-physics-block > ul > li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
+}
+.sheet .sheet-physics-block > ul > li:last-child {
+  border: none;
+}
+.sheet .sheet-finesse-list {
   border: solid 3px;
+  border-color: #2e7c2e;
+  background-color: #2e7c2e;
+}
+.sheet .sheet-intelect-list {
+  border: solid 3px;
+  border-color: #7d42aa;
+  background-color: #7d42aa;
+}
+.sheet .sheet-psyque-list {
+  border: solid 3px;
+  border-color: #504d55;
+  background-color: #504d55;
+}
+.sheet .sheet-main-list {
+  border: solid 3px;
+  border-color: #000000;
+  background-color: #000000;
 }
