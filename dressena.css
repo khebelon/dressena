@@ -58,6 +58,16 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
+.dressena.sheet.character {
+  height: fit-content !important;
+  width: min-content !important;
+}
+.dressena.sheet.character form {
+  display: grid;
+  grid-template-columns: auto 250px;
+  grid-template-rows: auto minmax(min-content, max-content);
+  row-gap: 0.5em;
+}
 .dressena.sheet.character .sidebar {
   grid-column-start: 2;
   display: flex;

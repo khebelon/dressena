@@ -1,4 +1,16 @@
 .dressena.sheet.character {
+
+    height: fit-content !important;
+    width: min-content !important;
+
+    form {
+        display: grid;
+        grid-template-columns: auto 250px;
+        grid-template-rows: auto minmax(min-content, max-content);
+        row-gap: 0.5em;
+    }
+
+
     .sidebar {
         grid-column-start: 2;
         display: flex;
