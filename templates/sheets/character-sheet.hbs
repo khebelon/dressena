@@ -1,14 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header character-header">
-        <div class="actor-img">
-            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-            <h1>
-                <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-            </h1>
-        </div>
-    </header>
 
-    <div class="sheet-body">
+    <div class="sheet-header">
         <div class="character-name">
         <h2>Character Name</h2>
         <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
@@ -19,17 +11,13 @@
         </div>
     </div>
 
+<div class="flex-container">
     <div class="sidebar">
-        <h1 class="class">
-            <div data-edit="system.type" contenteditable>
-                {{system.type}}
+            <div class="class">
+            Class: {{actor.type}}
             </div>
-        </h1>
         <div class="actor-img">
         <img src="{{actor.img}}" data-edit="img" title:"{{actor.name}}"/>
-        </div>
-        <div class="abilities">
-            {{> "systems/dressena/templates/partials/character-abilities-block.hbs"}}
         </div>
         <div class="weapon-list">
             {{#each weapons as |weapon id|}}
@@ -38,6 +26,13 @@
         </div>
     </div>
 
+
+    <div class="sheet-body">
+        <div class="abilities">
+            {{> "systems/dressena/templates/partials/character-abilities-block.hbs"}}
+        </div>
+    </div>
+</div>
 </form>
 
 

@@ -58,101 +58,86 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
-.dressena.sheet.character form {
-  display: flex;
-  flex-direction: column;
-  font-family: QTFrizQuad;
-}
-.dressena.sheet.character .character-header {
-  width: 700px;
-}
-.dressena.sheet.character .sheet-header {
-  top: 4px;
-  padding: 8px 8px 0px 8px;
-  flex-direction: row;
-}
-.dressena.sheet.character .sheet-header .actor-img {
-  height: 140px;
-  width: 154px;
-  min-height: 128px;
-  flex-grow: 0;
-  text-align: center;
-}
-.dressena.sheet.character .sheet-header .actor-img .profile-img {
-  height: 128px;
-  min-height: 128px;
-  width: auto;
-  margin: 0px;
-  border: 0px solid transparent;
-  object-fit: cover;
-}
-.dressena.sheet.character .sheet-header .actor-img h1 {
-  position: relative;
-  width: 154px;
-  top: -40px;
-  left: calc(0.5 * (100% - 154px));
-  font-size: 16px;
-  font-family: Caveat;
-  font-weight: bold;
-}
-.dressena.sheet.character .sheet-header .actor-img h1 input {
-  color: black;
-  text-align: center;
-  font-weight: bold;
-  border: 0px;
-  background: transparent;
-  padding: 10px 5px 0px 5px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.dressena.sheet.character .sheet-body {
+.sheet .sheet-header {
   width: 100%;
-  grid-column-start: 1;
-  grid-row-start: 1;
   display: flex;
   flex-direction: column;
 }
-.dressena.sheet.character .sidebar {
-  grid-column-start: 2;
+.sheet .flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
+  flex-direction: row;
+  justify-content: left;
 }
-.dressena.sheet.character .sidebar h1 {
-  text-align: center;
+.sheet .sidebar {
+  border: solid 5px #ffffff;
+  height: 100%;
+  width: 210px;
+  background-color: #927676;
+  color: #000000;
 }
-.dressena.sheet.character .sidebar .actor-img {
-  width: 256px;
+.sheet .sidebar .actor-img {
+  width: 200px;
   border: none;
   border-radius: 8px;
 }
-.sheet form {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
+.sheet .sheet-body {
+  width: 100%;
 }
-.sheet .sheet-physics-list {
+/*    .sheet-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+      }
+ 
+      .sidebar {
+        border: solid 5px rgb(255, 255, 255);
+        float:left;
+        height: 100%;
+        width: 210px;
+        position: flex;
+        background-color: rgb(146, 118, 118);
+        color: rgb(0, 0, 0);
+
+
+        .actor-img {
+            width: 200px;
+            border: none;
+            border-radius: 8px;
+        }
+    }
+
+    .sheet-body {
+        display: grid;
+        margin-left: 220px;
+      }
+*/
+.abilities .sheet-physics-list {
+  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #ae5353;
 }
-.sheet .sheet-finesse-list {
+.abilities .sheet-finesse-list {
+  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #2e7c2e;
 }
-.sheet .sheet-intelect-list {
+.abilities .sheet-intelect-list {
+  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #7d42aa;
 }
-.sheet .sheet-psyque-list {
+.abilities .sheet-psyque-list {
+  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #504d55;
 }
-.sheet .sheet-main-list {
+.abilities .sheet-main-list {
+  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #1899a5;
