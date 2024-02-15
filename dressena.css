@@ -71,14 +71,14 @@
   padding: 8px 8px 0px 8px;
   flex-direction: row;
 }
-.dressena.sheet.character .sheet-header .image-container {
+.dressena.sheet.character .sheet-header .actor-img {
   height: 140px;
   width: 154px;
   min-height: 128px;
   flex-grow: 0;
   text-align: center;
 }
-.dressena.sheet.character .sheet-header .image-container img {
+.dressena.sheet.character .sheet-header .actor-img .profile-img {
   height: 128px;
   min-height: 128px;
   width: auto;
@@ -86,7 +86,7 @@
   border: 0px solid transparent;
   object-fit: cover;
 }
-.dressena.sheet.character .sheet-header .image-container h1 {
+.dressena.sheet.character .sheet-header .actor-img h1 {
   position: relative;
   width: 154px;
   top: -40px;
@@ -95,7 +95,7 @@
   font-family: Caveat;
   font-weight: bold;
 }
-.dressena.sheet.character .sheet-header .image-container h1 input {
+.dressena.sheet.character .sheet-header .actor-img h1 input {
   color: black;
   text-align: center;
   font-weight: bold;
@@ -106,7 +106,7 @@
   margin-bottom: 0px;
 }
 .dressena.sheet.character .sheet-body {
-  width: 60%;
+  width: 100%;
   grid-column-start: 1;
   grid-row-start: 1;
   display: flex;
@@ -130,34 +130,29 @@
 .sheet form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 .sheet .sheet-physics-list {
-  left: 18%;
   border: solid 3px;
   border-color: #000000;
   background-color: #ae5353;
 }
 .sheet .sheet-finesse-list {
-  left: 29.5%;
   border: solid 3px;
   border-color: #000000;
   background-color: #2e7c2e;
 }
 .sheet .sheet-intelect-list {
-  left: 41%;
   border: solid 3px;
   border-color: #000000;
   background-color: #7d42aa;
 }
 .sheet .sheet-psyque-list {
-  left: 52.5%;
   border: solid 3px;
   border-color: #000000;
   background-color: #504d55;
 }
 .sheet .sheet-main-list {
-  left: 63.75%;
   border: solid 3px;
   border-color: #000000;
   background-color: #1899a5;
