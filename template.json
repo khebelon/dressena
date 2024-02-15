@@ -29,7 +29,8 @@
                 "occultism": 1,
                 "ego": 3,
                 "defense": 9
-            }
+            },
+            "concept": ""
         },
         "warrior": {
                 "templates": ["abilities"]

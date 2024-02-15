@@ -63,17 +63,25 @@
   flex-direction: column;
   align-items: center;
 }
-.dressena.sheet.character h1 {
+.dressena.sheet.character .sidebar h1 {
   text-align: center;
 }
-.dressena.sheet.character .actor-img {
+.dressena.sheet.character .sidebar .actor-img {
   width: 256px;
+  border: none;
+  border-radius: 8px;
 }
-.dressena.sheet.character input {
+.dressena.sheet.character .sidebar input {
   width: 100%;
 }
-.dressena.sheet.character select {
+.dressena.sheet.character .sidebar select {
   border: none;
+}
+.dressena.sheet.character .sheet-body {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
 }
 .sheet form {
   display: flex;
