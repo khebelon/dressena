@@ -4,7 +4,8 @@ import dressenaCharacterSheet from "./module/sheets/dressenaCharacterSheet.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
-        "systems/dressena/templates/partials/character-abilities-block.hbs"
+        "systems/dressena/templates/partials/character-abilities-block.hbs",
+        "systems/dressena/templates/partials/weapon-card.hbs"
     ];
     return loadTemplates(templatePaths);
 };
