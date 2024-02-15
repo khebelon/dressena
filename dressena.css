@@ -58,21 +58,66 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
-.dressena.sheet.character {
-  height: fit-content !important;
-  width: min-content !important;
-}
 .dressena.sheet.character form {
-  display: grid;
-  grid-template-columns: auto 250px;
-  grid-template-rows: auto minmax(min-content, max-content);
-  row-gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  font-family: QTFrizQuad;
+}
+.dressena.sheet.character .character-header {
+  width: 700px;
+}
+.dressena.sheet.character .sheet-header {
+  top: 4px;
+  padding: 8px 8px 0px 8px;
+  flex-direction: row;
+}
+.dressena.sheet.character .sheet-header .image-container {
+  height: 140px;
+  width: 154px;
+  min-height: 128px;
+  flex-grow: 0;
+  text-align: center;
+}
+.dressena.sheet.character .sheet-header .image-container img {
+  height: 128px;
+  min-height: 128px;
+  width: auto;
+  margin: 0px;
+  border: 0px solid transparent;
+  object-fit: cover;
+}
+.dressena.sheet.character .sheet-header .image-container h1 {
+  position: relative;
+  width: 154px;
+  top: -40px;
+  left: calc(0.5 * (100% - 154px));
+  font-size: 16px;
+  font-family: Caveat;
+  font-weight: bold;
+}
+.dressena.sheet.character .sheet-header .image-container h1 input {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  border: 0px;
+  background: transparent;
+  padding: 10px 5px 0px 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.dressena.sheet.character .sheet-body {
+  width: 60%;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
 }
 .dressena.sheet.character .sidebar {
   grid-column-start: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
 }
 .dressena.sheet.character .sidebar h1 {
   text-align: center;
@@ -82,58 +127,37 @@
   border: none;
   border-radius: 8px;
 }
-.dressena.sheet.character .sidebar input {
-  width: 100%;
-}
-.dressena.sheet.character .sidebar select {
-  border: none;
-}
-.dressena.sheet.character .sheet-body {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  display: flex;
-  flex-direction: column;
-}
 .sheet form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .sheet .sheet-physics-list {
-  text-align: center;
-  text-align-last: center;
-  align-items: center;
+  left: 18%;
   border: solid 3px;
   border-color: #000000;
   background-color: #ae5353;
 }
 .sheet .sheet-finesse-list {
-  text-align: center;
-  text-align-last: center;
-  align-items: center;
+  left: 29.5%;
   border: solid 3px;
   border-color: #000000;
   background-color: #2e7c2e;
 }
 .sheet .sheet-intelect-list {
-  text-align: center;
-  text-align-last: center;
-  align-items: center;
+  left: 41%;
   border: solid 3px;
   border-color: #000000;
   background-color: #7d42aa;
 }
 .sheet .sheet-psyque-list {
-  text-align: center;
-  text-align-last: center;
-  align-items: center;
+  left: 52.5%;
   border: solid 3px;
   border-color: #000000;
   background-color: #504d55;
 }
 .sheet .sheet-main-list {
-  text-align: center;
-  text-align-last: center;
-  align-items: center;
+  left: 63.75%;
   border: solid 3px;
   border-color: #000000;
   background-color: #1899a5;
