@@ -1,36 +1,52 @@
 .abilities {
 
-        
+   display: grid;
+   grid-template-areas: "sheet-physics-list sheet-finesse-list"
+                       "sheet-intelect-list sheet-psyque-list";
+    grid-template-columns: 155px 155px;
+    grid-template-rows: 90px 90px; 
+
+
+
     .sheet-physics-list {
-        width: 100%;
         border: solid 3px;
         border-color: rgb(0, 0, 0);
         background-color: rgb(174, 83, 83);
+        height: 95px;
+        width: 160px;
+
+        .stat {
+            width: 25px;
+        }
     }
     .sheet-finesse-list {
-        width: 100%;
+
         border: solid 3px;
         border-color: rgb(0, 0, 0);
         background-color: rgb(46, 124, 46);
+        height: 95px;
+        width: 160px;
+        .stat {
+            width: 25px;
+        }
     }
     .sheet-intelect-list {
-        width: 100%;
         border: solid 3px;
         border-color: rgb(0, 0, 0);
         background-color: rgb(125, 66, 170);
+        width: 160px;
+        .stat {
+            width: 25px;
+        }
     }
     .sheet-psyque-list {
-        width: 100%;
         border: solid 3px;
         border-color: rgb(0, 0, 0);
         background-color: rgb(80, 77, 85);
+        width: 160px;
+        .stat {
+            width: 25px;
+        }
     }
-    .sheet-main-list {
-        width: 100%;
-        border: solid 3px;
-        border-color: rgb(0, 0, 0);
-        background-color: rgb(24, 153, 165);
-    }
-
 
 }

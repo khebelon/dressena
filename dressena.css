@@ -58,6 +58,16 @@
 .sheet .weapon-sheet-content .editor {
   height: 100%;
 }
+.sheet .window-content input,
+.sheet .window-content select,
+.sheet .window-content textarea {
+  background: none;
+  border: none;
+}
+.sheet .window-content h1,
+.sheet .window-content h2 {
+  border: none;
+}
 .sheet .sheet-header {
   width: 100%;
   display: flex;
@@ -70,7 +80,7 @@
 }
 .sheet .sidebar {
   border: solid 5px #ffffff;
-  height: 100%;
+  height: 400px;
   width: 210px;
   background-color: #927676;
   color: #000000;
@@ -112,35 +122,49 @@
         margin-left: 220px;
       }
 */
+.abilities {
+  display: grid;
+  grid-template-areas: "sheet-physics-list sheet-finesse-list" "sheet-intelect-list sheet-psyque-list";
+  grid-template-columns: 155px 155px;
+  grid-template-rows: 90px 90px;
+}
 .abilities .sheet-physics-list {
-  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #ae5353;
+  height: 95px;
+  width: 160px;
+}
+.abilities .sheet-physics-list .stat {
+  width: 25px;
 }
 .abilities .sheet-finesse-list {
-  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #2e7c2e;
+  height: 95px;
+  width: 160px;
+}
+.abilities .sheet-finesse-list .stat {
+  width: 25px;
 }
 .abilities .sheet-intelect-list {
-  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #7d42aa;
+  width: 160px;
+}
+.abilities .sheet-intelect-list .stat {
+  width: 25px;
 }
 .abilities .sheet-psyque-list {
-  width: 100%;
   border: solid 3px;
   border-color: #000000;
   background-color: #504d55;
+  width: 160px;
 }
-.abilities .sheet-main-list {
-  width: 100%;
-  border: solid 3px;
-  border-color: #000000;
-  background-color: #1899a5;
+.abilities .sheet-psyque-list .stat {
+  width: 25px;
 }
 .dressena .weapon-card {
   width: 100%;
