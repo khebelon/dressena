@@ -28,4 +28,28 @@ export default class dressenaCharacterSheet extends ActorSheet {
     return baseData;
   }
 
+  activateListeners(html) {
+  
+   
+    html.find(".rollable").click(this._onRoll.bind(this));
+    super.activateListeners(html);
+  }
+
+  _onRoll(event) {
+    event.preventDefault();
+     const element = event.currentTarget;
+     const dataset = element.dataset;
+  
+     let roll = new Roll(dataset.roll, this.actor.getRollData());
+     roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: dataset.label,
+        rollMode: game.settings.get('core', 'rollMode'),
+      });
+      return roll;
+    }
+
 }
+
+
+
