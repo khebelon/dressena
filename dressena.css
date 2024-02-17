@@ -73,9 +73,25 @@
 .sheet .window-content h2 {
   border: none;
 }
-.sheet .sheet-header {
-  background: url(img/character-sheet-background.png);
-  width: 100%;
+.sheet .sheet-header img {
+  display: block;
+  opacity: 90%;
+}
+.sheet .sheet-header .character-name {
+  position: absolute;
+  top: 180px;
+  left: 30px;
+}
+.sheet .sheet-header .character-name .actor-name {
+  font-size: x-large;
+  background-color: transparent;
+  color: white;
+}
+.sheet .sheet-header .character-name .class {
+  font-size: medium;
+  color: white;
+  font-style: oblique;
+  margin-left: 10px;
 }
 .sheet .flex-container {
   background: url(img/character-sheet-background.png);
@@ -84,70 +100,62 @@
   justify-content: left;
 }
 .sheet .sidebar {
+  margin-top: 7px;
   height: 400px;
   width: 300px;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
+  border: 3px solid #9d9179;
   background-color: #575756;
 }
 .sheet .sidebar .actor-img {
   margin-left: 7px;
+  margin-top: 3px;
   width: 200px;
-  border: none;
+  border: 2px solid #9d9179;
   border-radius: 8px;
 }
 .sheet .sidebar .sidebar-stats {
-  display: table;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
-  background-color: #575756;
   font-style: italic;
 }
 .sheet .sidebar .sidebar-stats ul {
   list-style-type: none;
 }
-.sheet .sidebar .sidebar-stats .stat {
+.sheet .sidebar .endurance-stat-value {
+  margin-left: 135px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: transparent url("img/cs-endurance-button.png") no-repeat center / contain;
+  color: white;
+  font-size: large;
+}
+.sheet .sidebar .ego-stat-value {
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  background: transparent url("img/cs-ego-button.png") no-repeat center / contain;
+  color: white;
+  font-size: large;
+}
+.sheet .sidebar .defense-stat-value {
+  object-position: up 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: transparent url("img/cs-defense-button.png") no-repeat center / contain;
+  color: white;
+  font-size: large;
+}
+.sheet .sidebar .stat {
   background-color: transparent;
   font-weight: bold;
 }
 .sheet .sheet-body {
   width: 100%;
 }
-/*    .sheet-header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-      }
- 
-      .sidebar {
-        border: solid 5px rgb(255, 255, 255);
-        float:left;
-        height: 100%;
-        width: 210px;
-        position: flex;
-        background-color: rgb(146, 118, 118);
-        color: rgb(0, 0, 0);
-
-
-        .actor-img {
-            width: 200px;
-            border: none;
-            border-radius: 8px;
-        }
-    }
-
-    .sheet-body {
-        display: grid;
-        margin-left: 220px;
-      }
-*/
 .abilities {
   display: grid;
   grid-template-areas: "sheet-physics-list sheet-finesse-list" "sheet-intelect-list sheet-psyque-list";

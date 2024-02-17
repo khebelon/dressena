@@ -8,7 +8,10 @@
                     "value": 15,
                     "max": 15 
                 },
-                "endurance": 1,
+                "endurance": {
+                    "value": 1,
+                    "max": 1
+                },
                 "rangedWeaponHandling": 1,
                 "agility": 1,
                 "fineMotor": 1,

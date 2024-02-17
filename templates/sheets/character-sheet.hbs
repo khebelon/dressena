@@ -1,36 +1,25 @@
 <form class="{{cssClass}}" autocomplete="off">
-
     <div class="sheet-header">
-        <div class="character-name">
-        <h2>Character Name</h2>
-        <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+        <div class="khebelon-logo">
+            <img src='/systems/dressena/img/character-sheet-header.webp' width='725' height='200'/>
         </div>
-        <div class="panelBorder sheet-card">
-        <h2>Character Concept</h2>
-        <textarea name="system.concept" rows="1">{{system.concept}}</textarea>
+        <div class="character-name">
+        <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+        <div class="class">
+            {{actor.type}}
+        </div>
         </div>
     </div>
 
 <div class="flex-container">
     <div class="sidebar">
-            <div class="class">
-            Class: {{actor.type}}
-            </div>
         <div class="actor-img">
         <img src="{{actor.img}}" data-edit="img" title:"{{actor.name}}"/>
         <div class="sidebar-stats">   
-                <div class="ego-stat">   
-                <li>
-                    {{localize "dressena.ability.ego"}}
-                    <input class="stat" name="system.ego" value="{{system.ego}}" data-dtype="Number">
-                </li>
-                </div>
-                <div class="defense-stat">
-                <li>
-                    {{localize "dressena.ability.defense"}}
-                    <input class="stat" name="system.defense" value="{{system.defense}}" data-dtype="Number">
-                </li>
-                </div>
+                    <input class="ego-stat-value" name="system.ego" value="{{system.ego}}" data-dtype="Number">
+                    <input class="defense-stat-value" name="system.defense" value="{{system.defense}}" data-dtype="Number">
+                    <input class="endurance-stat-value" name="system.endurance.value" value="{{system.endurance.value}}" data-dtype="Number">
+        </div>
         </div>
         <div class="weapon-list">
             {{#each weapons as |item id|}}
@@ -52,7 +41,7 @@
             {{/each}}
         </div>
     </div>
-</div>
+
     <div class="sheet-body">
         <div class="abilities">
             {{> "systems/dressena/templates/partials/character-abilities-block.hbs"}}
