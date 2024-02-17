@@ -1,6 +1,7 @@
 <section class=abilities>
     <section class="physics-block">
         <ul class="sheet-physics-list">
+            <div class="characteristic"> PHYSICS </div>
             <li>
                 {{localize "dressena.ability.meleeWeaponHandling"}}
                 <input class="stat" name="system.meleeWeaponHandling" value="{{system.meleeWeaponHandling}}" data-dtype="Number">
@@ -20,6 +21,7 @@
     </section>
     <section class="sheet-finesse-block">      
             <ul class="sheet-finesse-list">
+            <div class="characteristic"> FINESSE </div>               
                 <li>
                     {{localize "dressena.ability.rangedWeaponHandling"}}
                     <input class="stat" name="system.rangedWeaponHandling" value="{{system.rangedWeaponHandling}}" data-dtype="Number">
@@ -44,6 +46,7 @@
     </section>
     <section class="sheet-intelect-block">      
             <ul class="sheet-intelect-list">
+                <div class="characteristic"> INTELECT </div>
                 <li>
                     {{localize "dressena.ability.exteriorWorld"}}
                     <input class="stat" name="system.exteriorWorld" value="{{system.exteriorWorld}}" data-dtype="Number">
@@ -83,33 +86,42 @@
     </section>
     <section class="sheet-psyque-block">      
             <ul class="sheet-psyque-list">
+                <div class="characteristic"> PSYQUE </div>
                 <li>
                     {{localize "dressena.ability.ethics"}}
                     <input class="stat" name="system.ethics" value="{{system.ethics}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.ethics}}" data-label="Ethics"><i class="fas fa-dice"></i></a>
+                    
                 </li>
                 <li>
                     {{localize "dressena.ability.painThreshold"}}
                     <input class="stat" name="system.painThreshold" value="{{system.painThreshold}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.painThreshold}}" data-label="Pain Threshold"><i class="fas fa-dice"></i></a>
                 </li>
                 <li>
                     {{localize "dressena.ability.valor"}}
                     <input class="stat" name="system.valor" value="{{system.valor}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.valor}}" data-label="Valor"><i class="fas fa-dice"></i></a>
                 </li>
                 <li>
                     {{localize "dressena.ability.rhetoric"}}
                     <input class="stat" name="system.rhetoric" value="{{system.rhetoric}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.rhetoric}}" data-label="Rhetoric"><i class="fas fa-dice"></i></a>
                 </li>
                 <li>
                     {{localize "dressena.ability.volition"}}
                     <input class="stat" name="system.volition" value="{{system.volition}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.volition}}" data-label="Volition"><i class="fas fa-dice"></i></a>
                 </li>
                 <li>
                     {{localize "dressena.ability.authority"}}
                     <input class="stat" name="system.authority" value="{{system.authority}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.authority}}" data-label="Authority"><i class="fas fa-dice"></i></a>
                 </li>
                 <li>
                     {{localize "dressena.ability.occultism"}}
                     <input class="stat" name="system.occultism" value="{{system.occultism}}" data-dtype="Number">
+                    <a class="rollable" data-roll="d10+{{system.occultism}}" data-label="Occultism"><i class="fas fa-dice"></i></a>
                 </li>
                 </ul>
     </section>

@@ -3,49 +3,98 @@
    display: grid;
    grid-template-areas: "sheet-physics-list sheet-finesse-list"
                        "sheet-intelect-list sheet-psyque-list";
-    grid-template-columns: 155px 155px;
-    grid-template-rows: 90px 90px; 
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 100px 100px; 
+    ul {
+        list-style-type: none;
+    }
 
 
 
     .sheet-physics-list {
-        border: solid 3px;
-        border-color: rgb(0, 0, 0);
-        background-color: rgb(174, 83, 83);
+        font-style: italic;
+        margin-left: 10px;
+        border-image-slice: 27 27 27 27;
+        border-image-width: 10px 10px 10px 10px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url(img/character-sheet-border.png);
         height: 95px;
-        width: 160px;
-
+        width: 230px;
+        .characteristic {
+            margin-left: 60px;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+        }
         .stat {
+            font-weight: bold;
             width: 25px;
+            background-color: transparent;
         }
     }
     .sheet-finesse-list {
-
-        border: solid 3px;
-        border-color: rgb(0, 0, 0);
-        background-color: rgb(46, 124, 46);
+        font-style: italic;
+        margin-left: 10px;
+        border-image-slice: 27 27 27 27;
+        border-image-width: 10px 10px 10px 10px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url(img/character-sheet-border.png);
         height: 95px;
-        width: 160px;
+        width: 230px;
+        .characteristic {
+            margin-left: 60px;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+        }
         .stat {
+            font-weight: bold;
             width: 25px;
+            background-color: transparent;
         }
     }
     .sheet-intelect-list {
-        border: solid 3px;
-        border-color: rgb(0, 0, 0);
-        background-color: rgb(125, 66, 170);
-        width: 160px;
+        font-style: italic;
+        margin-left: 10px;
+        border-image-slice: 27 27 27 27;
+        border-image-width: 10px 10px 10px 10px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url(img/character-sheet-border.png);
+        width: 230px;
+        .characteristic {
+            margin-left: 55px;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+        }
         .stat {
+            font-weight: bold;
             width: 25px;
+            background-color: transparent;
         }
     }
     .sheet-psyque-list {
-        border: solid 3px;
-        border-color: rgb(0, 0, 0);
-        background-color: rgb(80, 77, 85);
-        width: 160px;
+        font-style: italic;
+        margin-left: 10px;
+        border-image-slice: 27 27 27 27;
+        border-image-width: 10px 10px 10px 10px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url(img/character-sheet-border.png);
+        width: 230px;
+        .characteristic {
+            margin-left: 60px;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+        }
         .stat {
+            font-weight: bold;
             width: 25px;
+            background-color: transparent;
         }
     }
 
