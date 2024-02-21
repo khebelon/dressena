@@ -46,3 +46,6 @@ dressena.attackAgainst = {
 dressena.item = {
     quantity: "dressena.item.quantity"
 }
+dressena.armor = {
+    equipped: "dressena.armor.equipped"
+}

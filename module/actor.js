@@ -30,22 +30,29 @@ export class dressenaActor extends Actor {
     prepareDerivedData() {
       const actorData = this;
       const systemData = actorData.system;
-      const flags = actorData.flags.boilerplate || {};
-  
+      const flags = actorData.flags.dressenaActor || {};
+      
+//      systemData.defense = systemData.endurance.value+systemData.agility;
+//      let def = systemData.defense;
+//      console.log("defense es: "+def);
+//      console.log("agility es:"+systemData.agility);
+
       // Make separate methods for each Actor type (character, npc, etc.) to keep
       // things organized.
       this._prepareCharacterData(actorData);
       this._prepareNpcData(actorData);
+      this._UpdateDefense(actorData);
     }
   
     /**
      * Prepare Character type specific data
      */
     _prepareCharacterData(actorData) {
-      if (actorData.type !== 'character') return;
-  
+      if (actorData.type == 'character') return;
       // Make modifications to data here. For example:
       const systemData = actorData.system;
+
+
   
       // Loop through ability scores, and add their modifiers to our sheet output.
 //      for (let [key, ability] of Object.entries(systemData.abilities)) {
@@ -107,7 +114,18 @@ export class dressenaActor extends Actor {
       // Process additional NPC data here.
     }
 
-}
+    _UpdateDefense(actorData) {
+      const systemData = actorData.system;
+      systemData.defense = systemData.endurance.value+systemData.agility;
+      let def = systemData.defense;
+      console.log("defense es: "+def);
+      console.log("agility es:"+systemData.agility);
 
-  
+    }
+
+
+
+
+
+  } 
   

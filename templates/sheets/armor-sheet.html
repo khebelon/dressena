@@ -8,6 +8,7 @@
             <tr>
                 <th>{{localize "dressena.armor.armorBonus"}}</th>
                 <th>{{localize "dressena.armor.stealthReduction"}}</th>
+                <th>{{localize "dressena.armor.equipped"}}</th>
             </tr>
             <tr>
                 <td>
@@ -15,6 +16,9 @@
                 </td>
                 <td>
                     <input name="system.stealthReduction" type="text" value="{{system.stealthReduction}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="system.equipped" type="checkbox" value="{{system.equipped}}" data-dtype="bool" />
                 </td>
             </tr>
         </table>

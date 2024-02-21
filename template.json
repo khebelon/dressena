@@ -73,7 +73,8 @@
         "armor": {
             "templates": ["base"],
             "armorBonus": 0,
-            "stealthReduction": 0
+            "stealthReduction": 0,
+            "equipped": false
           },
         "spell": {
             "templates": ["base"],

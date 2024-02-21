@@ -15,7 +15,8 @@
     },
     "armor": {
         "armorBonus": "Armor Bonus",
-        "stealthReduction": "Stealth Reduction"      
+        "stealthReduction": "Stealth Reduction",
+        "equipped": "Equipped"      
     },
     "ability": {
         "meleeWeaponHandling": "Melee Weapon Handling", 
