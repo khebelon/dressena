@@ -53,6 +53,8 @@ export class dressenaActor extends Actor {
       const systemData = actorData.system;
 
 
+
+
   
       // Loop through ability scores, and add their modifiers to our sheet output.
 //      for (let [key, ability] of Object.entries(systemData.abilities)) {
@@ -116,10 +118,27 @@ export class dressenaActor extends Actor {
 
     _UpdateDefense(actorData) {
       const systemData = actorData.system;
-      systemData.defense = systemData.endurance.value+systemData.agility;
+      
+      
       let def = systemData.defense;
-      console.log("defense es: "+def);
-      console.log("agility es:"+systemData.agility);
+      console.log("defense is: "+def);
+      console.log("agility is:"+systemData.agility);
+      let armors = this.items.filter(function (item) { return item.type == "armor" });
+      let armorData = {};
+      let armorBonus = 0;
+      let armorEquipped;
+      let stealthReduction = 0;
+      armors.forEach(armor => {
+        armorData = armor.getRollData();
+        console.log("ARMADURA ES: "+armorData.armorBonus)
+        armorBonus = armorData.armorBonus;
+        armorEquipped = armorData.equipped;
+        stealthReduction= armorData.stealthReduction;
+        console.log("ENBUCLE: "+armorEquipped);
+      });
+      console.log("ARMOREQUIPPED: "+armorEquipped);
+      systemData.defense = systemData.endurance.value+systemData.agility+armorBonus;
+//      systemData.stealth = systemData.stealth-stealthReduction;
 
     }
 

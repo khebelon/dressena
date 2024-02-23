@@ -62,7 +62,7 @@
         "weapon": {
             "templates": ["base"],
             "attackWith": "meleeWeaponHandling",
-            "damage": 0,
+            "damage": "d10",
             "experienceBonus": 0
         },
         "trait": {
