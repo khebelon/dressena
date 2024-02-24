@@ -64,6 +64,9 @@
     },
     "item": {
         "quantity": "Quantity"
+    },
+    "combatAction": {
+        "enduranceCost": "Endurance Cost"
     }
 }
 }

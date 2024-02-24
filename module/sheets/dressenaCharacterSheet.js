@@ -58,6 +58,8 @@ getData() {
   context.armors = context.items.filter(function (item) { return item.type == "armor" });
   context.spells = context.items.filter(function (item) { return item.type == "spell" });
   context.items = context.items.filter(function (item) { return item.type == "item" });
+  context.combatActions = context.items.filter(function (item) { return item.type == "combatAction" });
+
 
   return context;
 }

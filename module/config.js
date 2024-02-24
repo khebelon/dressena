@@ -49,3 +49,6 @@ dressena.item = {
 dressena.armor = {
     equipped: "dressena.armor.equipped"
 }
+dressena.combatAction = {
+    enduranceCost: "dressena.combatAction.enduranceCost"
+}

@@ -53,7 +53,7 @@
         },
 
     "Item":{
-        "types":["trait","weapon","armor","spell","item"],
+        "types":["trait","weapon","armor","spell","item", "combatAction"],
         "templates": {
             "base": {
                 "description": ""
@@ -85,7 +85,11 @@
         "item": {
             "templates": ["base"],
             "quantity": 1
-          }
+          },
+        "combatAction": {
+            "templates": ["base"],
+            "enduranceCost": 0            
+        }
     }
 
 }
