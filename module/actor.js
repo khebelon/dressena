@@ -138,7 +138,6 @@ export class dressenaActor extends Actor {
       });
       console.log("ARMOREQUIPPED: "+armorEquipped);
       systemData.defense = systemData.endurance.value+systemData.agility+armorBonus;
-//      systemData.stealth = systemData.stealth-stealthReduction;
 
     }
 

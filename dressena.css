@@ -212,7 +212,7 @@
   border-image-repeat: stretch stretch;
   border-image-source: url(img/character-sheet-border.png);
 }
-.sheet .combat-actions .weapon-list {
+.sheet .combat-actions .combatactions-list {
   position: relative;
   right: 150px;
   font-size: small;
