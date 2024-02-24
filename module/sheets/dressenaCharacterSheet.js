@@ -1,3 +1,5 @@
+import * as Dice from "../dice.js";
+
 export default class dressenaCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
@@ -53,12 +55,12 @@ getData() {
   // Add roll data for TinyMCE editors.
   context.rollData = context.actor.getRollData();
 
+  context.combatActions = context.items.filter(function (item) { return item.type == "combatAction" });
   context.weapons = context.items.filter(function (item) { return item.type == "weapon" });
   context.traits = context.items.filter(function (item) { return item.type == "trait" });
   context.armors = context.items.filter(function (item) { return item.type == "armor" });
   context.spells = context.items.filter(function (item) { return item.type == "spell" });
   context.items = context.items.filter(function (item) { return item.type == "item" });
-  context.combatActions = context.items.filter(function (item) { return item.type == "combatAction" });
 
 
   return context;
@@ -101,6 +103,8 @@ activateListeners(html) {
 
   // Rollable abilities.
   html.on('click', '.rollable', this._onRoll.bind(this));
+  html.find(".weapon-roll").click(this._onWeaponRoll.bind(this));
+
 
   // Drag events for macros.
   if (this.actor.isOwner) {
@@ -172,57 +176,60 @@ _onRoll(event) {
   }
 }
 
+_onWeaponRoll(event) {
+  event.preventDefault();
+  const itemID = event.currentTarget.closest(".item").dataset.itemId;
+  const item = this.actor.items.get(itemID);
+  let rollData = item.getRollData();
+  let abilityMod;
+
+  let weaponName = item.name;
+  let weaponAbility = item.system.attackWith;
+  let weaponDamage = item.system.damage;
+  let weaponBonus = item.system.experienceBonus;
+
+  if (weaponAbility === "melee") {
+  abilityMod = this.actor.system.meleeWeaponHandling;
+  }
+
+  switch (weaponAbility) {
+    case 'melee':
+      abilityMod = this.actor.system.meleeWeaponHandling;
+        break;
+    case 'ranged':
+    abilityMod = this.actor.system.rangedWeaponHandling;
+      break;
+    case 'ego':
+      abilityMod = this.actor.system.ego;
+        break;
+    case 'fine':
+      abilityMod = this.actor.system.fineMotor;
+        break;
+    case 'metaphysics':
+      abilityMod = this.actor.system.metaphysics;
+        break;
+ 
+    }
+
+  console.log("NAME:"+weaponName+" Damage:"+weaponDamage+" Bonus:"+weaponBonus+"ability is:"+abilityMod);
+
+
+  Dice.WeaponRoll(
+    {
+      weaponName: weaponName,
+      weaponAbility: weaponAbility,
+      weaponDamage: weaponDamage,
+      weaponName: weaponName,
+      description: rollData.description,
+      weaponBonus: weaponBonus,
+      abilityMod: abilityMod
+    }
+  )
+
 
 }
 
 
 
-
- /* getData() {
-    // Retrieve the data structure from the base sheet.
-    const baseData = super.getData();
-
-    // Use a safe clone of the actor data for further operations.
-    const actorData = this.actor.toObject(false);
-
-    // Add the actor's data to base structure for easier access
-    baseData.system = actorData.system;
-
-    // Add config data to base sctructure
-    baseData.config = CONFIG.dressena;
-
-    baseData.weapons = baseData.items.filter(function (item) { return item.type == "weapon" });
-    baseData.traits = baseData.items.filter(function (item) { return item.type == "trait" });
-    baseData.armors = baseData.items.filter(function (item) { return item.type == "armor" });
-    baseData.spells = baseData.items.filter(function (item) { return item.type == "spell" });
-    baseData.items = baseData.items.filter(function (item) { return item.type == "item" });
-
-    return baseData;
-  }
-
-  activateListeners(html) {
-  
-   
-    html.find(".rollable").click(this._onRoll.bind(this));
-    super.activateListeners(html);
-
-    new ContextMenu(html, ".weapon-card", this.itemContextMenu)
-  }
-
-  _onRoll(event) {
-    event.preventDefault();
-     const element = event.currentTarget;
-     const dataset = element.dataset;
-  
-     let roll = new Roll(dataset.roll, this.actor.getRollData());
-     roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: dataset.label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
-*/
-
-
+}
 

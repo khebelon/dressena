@@ -42,6 +42,7 @@ export class dressenaActor extends Actor {
       this._prepareCharacterData(actorData);
       this._prepareNpcData(actorData);
       this._UpdateDefense(actorData);
+      this._ManageCombatActions(actorData);
     }
   
     /**
@@ -134,15 +135,22 @@ export class dressenaActor extends Actor {
         armorBonus = armorData.armorBonus;
         armorEquipped = armorData.equipped;
         stealthReduction= armorData.stealthReduction;
-        console.log("ENBUCLE: "+armorEquipped);
       });
-      console.log("ARMOREQUIPPED: "+armorEquipped);
       systemData.defense = systemData.endurance.value+systemData.agility+armorBonus;
 
     }
 
 
+  _ManageCombatActions(actorData) {
+    const systemData = actorData.system;
 
+    let combatActions = this.items.filter(function (item) { return item.type == "combatAction" });
+    let combatActionData = {};
+    combatActions.forEach(combatAction => {
+      combatActionData = combatAction.getRollData();
+      console.log("ENDURANCE COST ES: "+combatActionData.enduranceCost);
+    });
+  }
 
 
   } 

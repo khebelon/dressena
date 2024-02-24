@@ -105,8 +105,8 @@
   opacity: 90%;
 }
 .sheet .sheet-header .character-name {
-  position: absolute;
-  top: 180px;
+  position: relative;
+  top: -70px;
   left: 30px;
 }
 .sheet .sheet-header .character-name .actor-name {
@@ -225,7 +225,7 @@
   font-weight: bold;
   font-style: italic;
   left: 180px;
-  top: 60px;
+  top: 70px;
   color: #4c4538;
   border-image-slice: 27 27 27 27;
   border-image-width: 10px 10px 10px 10px;
@@ -369,4 +369,19 @@
 }
 .sheet .combat-action-sheet-content .editor {
   height: 100%;
+}
+.chat-card-weapon {
+  margin: 5px 0;
+}
+.chat-card-weapon span {
+  display: block;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #8e0707;
+}
+.chat-card-weapon button {
+  font-size: large;
+  height: 24px;
+  line-height: 20px;
+  margin: 2px 0;
 }

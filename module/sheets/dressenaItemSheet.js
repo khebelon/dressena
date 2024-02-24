@@ -47,8 +47,8 @@ export default class dressenaItemSheet extends ItemSheet {
         html.on('click', '.effect-control', (ev) =>
           onManageActiveEffect(ev, this.item)
         );
-      }
-    
 
+      }
+   
 
     }
