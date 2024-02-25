@@ -43,13 +43,3 @@ Handlebars.registerHelper('toLowerCase', function (str) {
   });
 
 
-let socket;
-Hooks.once("socketlib.ready", () => {
-    socket = socketlib.registerSystem("dressena");
-    socket.register("interrupt", interrupt);
-});
-
-function interrupt (targetActor, newHealth) {
-    targetActor.update({"system.health.value": newHealth})
-}
-  

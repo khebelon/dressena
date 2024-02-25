@@ -100,8 +100,7 @@ import { dressena } from "./config.js";
     ChatMessage.create(chatData);
 
     let newHealth = targetActor.system.health.value - damageRoll;
-//    targetActor.update({"system.health.value": newHealth})
-    socket.executeasGM("interrupt", this.targetActor, this.newHealth);
+    targetActor.update({"system.health.value": newHealth})
 
 
   }
