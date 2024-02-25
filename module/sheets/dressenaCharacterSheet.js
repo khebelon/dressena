@@ -104,6 +104,8 @@ activateListeners(html) {
   // Rollable abilities.
   html.on('click', '.rollable', this._onRoll.bind(this));
   html.find(".weapon-roll").click(this._onWeaponRoll.bind(this));
+  html.find(".combataction-roll").click(this._onCombatActionRoll.bind(this));
+
 
 
   // Drag events for macros.
@@ -182,11 +184,15 @@ _onWeaponRoll(event) {
   const item = this.actor.items.get(itemID);
   let rollData = item.getRollData();
   let abilityMod;
+  const actorData = this.actor;
 
   let weaponName = item.name;
   let weaponAbility = item.system.attackWith;
   let weaponDamage = item.system.damage;
   let weaponBonus = item.system.experienceBonus;
+  let combatStrategy = actorData.system.combatStrategy;
+
+
 
   if (weaponAbility === "melee") {
   abilityMod = this.actor.system.meleeWeaponHandling;
@@ -214,22 +220,90 @@ _onWeaponRoll(event) {
   console.log("NAME:"+weaponName+" Damage:"+weaponDamage+" Bonus:"+weaponBonus+"ability is:"+abilityMod);
 
 
-  Dice.WeaponRoll(
+  const targets = Array.from(game.user.targets);
+
+
+  const targetActor = targets[0].actor;
+  const targetDefense = targets[0].actor.system.defense;
+  console.log("TIRANDO ATAQUE CONTRA DEFENSA: "+targetActor.system.defense);
+
+
+  let attack = Dice.WeaponAttack(
     {
+      rollType: "Attack Roll",
       weaponName: weaponName,
       weaponAbility: weaponAbility,
       weaponDamage: weaponDamage,
       weaponName: weaponName,
       description: rollData.description,
       weaponBonus: weaponBonus,
-      abilityMod: abilityMod
+      abilityMod: abilityMod,
+      combatStrategy: combatStrategy,
+      targetDefense: targetDefense,
+      targetActor: targetActor
     }
   )
 
+  const evalAttack = async () => {
+    let attackOutcome = await attack;
+
+    if (attackOutcome=="HIT") {
+      function delay(time) {
+         return new Promise(resolve => setTimeout(resolve, time));
+      }
+      
+      delay(3000).then(() =>   Dice.WeaponDamage(
+        {
+          rollType: "Damage Roll",
+          weaponName: weaponName,
+          weaponAbility: weaponAbility,
+          weaponDamage: weaponDamage,
+          weaponName: weaponName,
+          description: rollData.description,
+          weaponBonus: weaponBonus,
+          abilityMod: abilityMod,
+          combatStrategy: combatStrategy,
+          targetDefense: targetDefense,
+          targetActor: targetActor
+        }
+      )             );
+    
+      }
+
+  };
+
+evalAttack();
 
 }
 
+_onCombatActionRoll(event) {
+  event.preventDefault();
+  event.preventDefault();
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  const itemID = event.currentTarget.closest(".item").dataset.itemId;
+  const item = this.actor.items.get(itemID);
+  let rollData = item.getRollData();
+  const actorData = this.actor;
+
+  let enduranceCost = item.system.enduranceCost
+  let actorEndurance = actorData.system.endurance.value
+
+  if (dataset.rollType) {
+    if (dataset.rollType == 'item') {
+      const itemId = element.closest('.item').dataset.itemId;
+      const item = this.actor.items.get(itemId);
+      if (item) {
+//        actorData.system.endurance.value = actorEndurance - enduranceCost;
+        let newEndurance = actorEndurance - enduranceCost;
+        this.actor.update({"system.endurance.value": newEndurance})
+        return item.roll(); 
+      }
+    }
+  }
+
 
 
 }
 
+}

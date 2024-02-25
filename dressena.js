@@ -41,4 +41,15 @@ Hooks.once("init", function() {
 Handlebars.registerHelper('toLowerCase', function (str) {
     return str.toLowerCase();
   });
+
+
+let socket;
+Hooks.once("socketlib.ready", () => {
+    socket = socketlib.registerSystem("dressena");
+    socket.register("interrupt", interrupt);
+});
+
+function interrupt (targetActor, newHealth) {
+    targetActor.update({"system.health.value": newHealth})
+}
   

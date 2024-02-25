@@ -372,6 +372,10 @@
 }
 .chat-card-weapon {
   margin: 5px 0;
+  text-align: center;
+}
+.chat-card-weapon .output {
+  color: red;
 }
 .chat-card-weapon span {
   display: block;
