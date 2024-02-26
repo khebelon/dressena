@@ -95,7 +95,6 @@ activateListeners(html) {
   html.on('click', '.item-delete', (ev) => {
     const li = $(ev.currentTarget).parents('.item');
     const item = this.actor.items.get(li.data('itemId'));
-    console.log(li);
     item.delete();
     li.slideUp(200, () => this.render(false));
   });
@@ -105,6 +104,8 @@ activateListeners(html) {
   html.on('click', '.rollable', this._onRoll.bind(this));
   html.find(".weapon-roll").click(this._onWeaponRoll.bind(this));
   html.find(".combataction-roll").click(this._onCombatActionRoll.bind(this));
+  html.find(".item-roll").click(this._onItemRoll.bind(this));
+
 
 
 
@@ -217,15 +218,12 @@ _onWeaponRoll(event) {
  
     }
 
-  console.log("NAME:"+weaponName+" Damage:"+weaponDamage+" Bonus:"+weaponBonus+"ability is:"+abilityMod);
-
 
   const targets = Array.from(game.user.targets);
 
 
   const targetActor = targets[0].actor;
   const targetDefense = targets[0].actor.system.defense;
-  console.log("TIRANDO ATAQUE CONTRA DEFENSA: "+targetActor.system.defense);
 
 
   let attack = Dice.WeaponAttack(
@@ -301,9 +299,73 @@ _onCombatActionRoll(event) {
       }
     }
   }
+}
 
+_onItemRoll (event) {
+  event.preventDefault();
+  event.preventDefault();
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  const itemID = event.currentTarget.closest(".item").dataset.itemId;
+  const item = this.actor.items.get(itemID);
+  let rollData = item.getRollData();
+  const actorData = this.actor;
 
+  if (item.name=="pocion") {
+    let newQuantity= item.system.quantity-1;
+    item.update({"system.quantity": newQuantity});
+    delay2(100).then(() => useItem(item, itemID, newQuantity, actorData));
+    }
+    
+
+  }
 
 }
 
+
+
+async function useItem(item, itemID, newQuantity, actorData) {
+  if (item.system.quantity==0) {
+    item.delete();
+  }
+    const messageTemplate = "systems/dressena/templates/chat/weapon-chat.hbs";
+    let actorSurvival = actorData.system.survival;
+
+    let rollFormula = `1d8 + ${actorSurvival}`;
+
+    let rollResult = await new Roll(rollFormula).roll({ async: true });
+    let renderedRoll = await rollResult.render();
+    let cure = rollResult.total;
+    
+    let actorHealth = actorData.system.health.value;
+    let newHealth = actorHealth + cure;
+    actorData.update({"system.health.value": newHealth})
+
+    let templateContext = {
+      flavor: `Use Potion on ${actorData.name}`,
+      weapon: item.name,
+      roll: renderedRoll,
+    }
+  
+    let chatData = {
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker(),
+      roll: rollResult,
+      content: await renderTemplate(messageTemplate, templateContext),
+      sound: CONFIG.sounds.dice,
+      type: CONST.CHAT_MESSAGE_TYPES.ROLL
+    }
+  
+    ChatMessage.create(chatData);
+
+
+
+  
+  
 }
+
+function delay2(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+

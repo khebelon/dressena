@@ -122,8 +122,6 @@ export class dressenaActor extends Actor {
       
       
       let def = systemData.defense;
-      console.log("defense is: "+def);
-      console.log("agility is:"+systemData.agility);
       let armors = this.items.filter(function (item) { return item.type == "armor" });
       let armorData = {};
       let armorBonus = 0;
@@ -131,7 +129,6 @@ export class dressenaActor extends Actor {
       let stealthReduction = 0;
       armors.forEach(armor => {
         armorData = armor.getRollData();
-        console.log("ARMADURA ES: "+armorData.armorBonus)
         armorBonus = armorData.armorBonus;
         armorEquipped = armorData.equipped;
         stealthReduction= armorData.stealthReduction;
@@ -148,7 +145,6 @@ export class dressenaActor extends Actor {
     let combatActionData = {};
     combatActions.forEach(combatAction => {
       combatActionData = combatAction.getRollData();
-      console.log("ENDURANCE COST ES: "+combatActionData.enduranceCost);
     });
   }
 

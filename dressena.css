@@ -242,6 +242,11 @@
   right: 150px;
   font-size: small;
 }
+.sheet .equipment .item-list {
+  position: relative;
+  right: 150px;
+  font-size: small;
+}
 .abilities {
   display: grid;
   position: relative;
