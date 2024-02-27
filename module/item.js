@@ -70,6 +70,179 @@ export class dressenaItem extends Item {
         return roll;
       }
     }
+
+
+    async _onCreate(data, options, user){
+
+      await super._onCreate(data, options, user);
+
+      if (this.type == "trait") {
+        let improvement = this.system.traitBonus;
+        let improvedAbility = this.system.improvedAbility;
+        let improvedAbilityValue = 0;
+        switch (improvedAbility) {
+          case "meleeWeaponHandling":
+            improvedAbilityValue = this.actor.system.meleeWeaponHandling;
+            break;
+          case "health":
+            improvedAbilityValue = this.actor.system.health.max;
+              break;
+          case "endurance":
+            improvedAbilityValue = this.actor.system.endurance.max;
+              break;
+          case "rangedWeaponHandling":
+            improvedAbilityValue = this.actor.system.rangedWeaponHandling;
+              break;
+          case "agility":
+            improvedAbilityValue = this.actor.system.agility;
+            break;
+          case "fineMotor":
+            improvedAbilityValue = this.actor.system.fineMotor;
+              break;
+          case "stealth":
+            improvedAbilityValue = this.actor.system.stealth;
+              break;
+          case "exteriorWorld":
+            improvedAbilityValue = this.actor.system.exteriorWorld;
+              break;
+          case "logic":
+            improvedAbilityValue = this.actor.system.logic;
+            break;
+          case "suggestion":
+            improvedAbilityValue = this.actor.system.suggestion;
+              break;
+          case "combatStrategy":
+            improvedAbilityValue = this.actor.system.combatStrategy;
+              break;
+          case "metaphysics":
+            improvedAbilityValue = this.actor.system.metaphysics;
+              break;
+          case "survival":
+            improvedAbilityValue = this.actor.system.survival;
+            break;
+          case "encyclopedia":
+            improvedAbilityValue = this.actor.system.encyclopedia;
+              break;
+          case "ethics":
+            improvedAbilityValue = this.actor.system.ethics;
+              break;
+          case "painThreshold":
+            improvedAbilityValue = this.actor.system.painThreshold;
+              break;
+          case "valor":
+            improvedAbilityValue = this.actor.system.valor;
+              break;
+          case "rhetoric":
+            improvedAbilityValue = this.actor.system.rhetoric;
+              break;
+          case "volition":
+            improvedAbilityValue = this.actor.system.volition;
+            break;
+          case "authority":
+            improvedAbilityValue = this.actor.system.authority;
+              break;
+          case "occultism":
+            improvedAbilityValue = this.actor.system.occultism;
+              break;
+          case "ego":
+            improvedAbilityValue = this.actor.system.ego;
+              break;
+          case "defense":
+            improvedAbilityValue = this.actor.system.defense;
+              break;                                    
+        }
+        this.actor.update({[`system.${this.system.improvedAbility}`] : improvedAbilityValue + improvement});
+        
+      }
+
   }
-  
+
+  async _onDelete(data, options, user){
+    
+    await super._onDelete(data, options, user);
+    
+    if (this.type == "trait") {
+      let improvement = this.system.traitBonus;
+      let improvedAbility = this.system.improvedAbility;
+      let improvedAbilityValue = 0;
+      switch (improvedAbility) {
+        case "meleeWeaponHandling":
+          improvedAbilityValue = this.actor.system.meleeWeaponHandling;
+          break;
+        case "health":
+          improvedAbilityValue = this.actor.system.health.max;
+            break;
+        case "endurance":
+          improvedAbilityValue = this.actor.system.endurance.max;
+            break;
+        case "rangedWeaponHandling":
+          improvedAbilityValue = this.actor.system.rangedWeaponHandling;
+            break;
+        case "agility":
+          improvedAbilityValue = this.actor.system.agility;
+          break;
+        case "fineMotor":
+          improvedAbilityValue = this.actor.system.fineMotor;
+            break;
+        case "stealth":
+          improvedAbilityValue = this.actor.system.stealth;
+            break;
+        case "exteriorWorld":
+          improvedAbilityValue = this.actor.system.exteriorWorld;
+            break;
+        case "logic":
+          improvedAbilityValue = this.actor.system.logic;
+          break;
+        case "suggestion":
+          improvedAbilityValue = this.actor.system.suggestion;
+            break;
+        case "combatStrategy":
+          improvedAbilityValue = this.actor.system.combatStrategy;
+            break;
+        case "metaphysics":
+          improvedAbilityValue = this.actor.system.metaphysics;
+            break;
+        case "survival":
+          improvedAbilityValue = this.actor.system.survival;
+          break;
+        case "encyclopedia":
+          improvedAbilityValue = this.actor.system.encyclopedia;
+            break;
+        case "ethics":
+          improvedAbilityValue = this.actor.system.ethics;
+            break;
+        case "painThreshold":
+          improvedAbilityValue = this.actor.system.painThreshold;
+            break;
+        case "valor":
+          improvedAbilityValue = this.actor.system.valor;
+            break;
+        case "rhetoric":
+          improvedAbilityValue = this.actor.system.rhetoric;
+            break;
+        case "volition":
+          improvedAbilityValue = this.actor.system.volition;
+          break;
+        case "authority":
+          improvedAbilityValue = this.actor.system.authority;
+            break;
+        case "occultism":
+          improvedAbilityValue = this.actor.system.occultism;
+            break;
+        case "ego":
+          improvedAbilityValue = this.actor.system.ego;
+            break;
+        case "defense":
+          improvedAbilityValue = this.actor.system.defense;
+            break;                                    
+      }
+      this.actor.update({[`system.${this.system.improvedAbility}`] : improvedAbilityValue - improvement});
+
+      
+    }
+    
+}
+
+
+  }
   
