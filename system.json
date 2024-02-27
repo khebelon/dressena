@@ -27,12 +27,6 @@
 	"primaryTokenAttribute": "health",
 	"initiative": "1d20 + @valor",
 	"socket": true,
-	"dependencies": [
-		{
-		"name": "socketlib",
-		"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
-		}
-	],
 	"url": "https://github.com/khebelon/dressena/",
     "manifest": "https://raw.githubusercontent.com/khebelon/dressena/main/system.json",
 	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.26.zip"
