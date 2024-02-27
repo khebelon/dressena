@@ -62,7 +62,6 @@ getData() {
   context.spells = context.items.filter(function (item) { return item.type == "spell" });
   context.items = context.items.filter(function (item) { return item.type == "item" });
 
-
   return context;
 }
 
@@ -73,7 +72,7 @@ get template() {
 
 
 
-/** @override */
+/** @override */         
 activateListeners(html) {
   super.activateListeners(html);
 
@@ -118,7 +117,7 @@ activateListeners(html) {
       li.addEventListener('dragstart', handler, false);
     });
   }
-}
+}        
 
 /**
  * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
@@ -319,6 +318,8 @@ _onItemRoll (event) {
     
 
   }
+
+
 
 }
 

@@ -3,6 +3,8 @@
  * @extends {Item}
  */
 export class dressenaItem extends Item {
+  
+  
     /**
      * Augment the basic Item data model with additional dynamic data.
      */

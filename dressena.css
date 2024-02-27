@@ -247,6 +247,26 @@
   right: 150px;
   font-size: small;
 }
+.sheet .traits {
+  width: 450px;
+  margin-left: 70px;
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  left: 180px;
+  top: 60px;
+  color: #4c4538;
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border.png);
+}
+.sheet .traits .trait-list {
+  position: relative;
+  right: 150px;
+  font-size: small;
+}
 .abilities {
   display: grid;
   position: relative;

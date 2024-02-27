@@ -68,7 +68,8 @@
         "trait": {
             "templates": ["base"],
             "improvedAbility": "meleeWeaponHandling",
-            "traitBonus": 0
+            "traitBonus": 0,
+            "active": false
           },
         "armor": {
             "templates": ["base"],

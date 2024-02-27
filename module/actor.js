@@ -43,6 +43,7 @@ export class dressenaActor extends Actor {
       this._prepareNpcData(actorData);
       this._UpdateDefense(actorData);
       this._ManageCombatActions(actorData);
+ //     this._UpdateTraits(actorData);
     }
   
     /**
@@ -147,6 +148,24 @@ export class dressenaActor extends Actor {
       combatActionData = combatAction.getRollData();
     });
   }
+
+
+ /* _UpdateTraits(actorData) {
+    const systemData = actorData.system;
+    let traits = this.items.filter(function (item) { return item.type == "trait" });
+    traits.forEach(trait => {
+      if(trait.system.active==false) {
+        console.log("ACTIVO EL TRAIT:"+trait.name);
+        trait.system.active = true;
+        let mwh = actorData.system.meleeWeaponHandling;
+        let nmwh = mwh + 10;
+   //     actorData.update({"system.meleeWeaponHandling": nmwh});
+
+      }
+        
+    });
+
+  }*/
 
 
   } 

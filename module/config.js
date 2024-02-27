@@ -31,7 +31,8 @@ dressena.abilities = {
     authority: "dressena.ability.authority",
     occultism: "dressena.ability.occultism",
     ego: "dressena.ability.ego",
-    defense: "dressena.ability.defense"
+    defense: "dressena.ability.defense",
+    none: "none"
 }
 dressena.spellAttackTypes = {
     ego: "dressena.spellAttackWith.ego",
