@@ -1,3 +1,4 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.js";
 import * as Dice from "../dice.js";
 
 export default class dressenaCharacterSheet extends ActorSheet {
@@ -50,6 +51,7 @@ getData() {
 
   context.config = CONFIG.dressena;
   const systemData = actorData.system;
+  context.effects = prepareActiveEffectCategories(this.actor.allApplicableEffects());
 
 
   // Add roll data for TinyMCE editors.
@@ -104,6 +106,7 @@ activateListeners(html) {
   html.find(".weapon-roll").click(this._onWeaponRoll.bind(this));
   html.find(".combataction-roll").click(this._onCombatActionRoll.bind(this));
   html.find(".item-roll").click(this._onItemRoll.bind(this));
+  html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
 
 

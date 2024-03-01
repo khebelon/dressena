@@ -1,0 +1,28 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div class="trait-sheet-content">
+        <table>
+            <tr>
+                <th>{{localize "dressena.trait.traitBonus"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="system.improvedAbility">
+                        {{#select system.improvedAbility}}
+                        {{#each config.abilities as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="system.traitBonus" type="text" value="{{system.traitBonus}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

@@ -147,9 +147,7 @@ export class dressenaItem extends Item {
           case "ego":
             improvedAbilityValue = this.actor.system.ego;
               break;
-          case "defense":
-            improvedAbilityValue = this.actor.system.defense;
-              break;                                    
+                                
         }
         this.actor.update({[`system.${this.system.improvedAbility}`] : improvedAbilityValue + improvement});
         
@@ -232,9 +230,7 @@ export class dressenaItem extends Item {
         case "ego":
           improvedAbilityValue = this.actor.system.ego;
             break;
-        case "defense":
-          improvedAbilityValue = this.actor.system.defense;
-            break;                                    
+                                
       }
       this.actor.update({[`system.${this.system.improvedAbility}`] : improvedAbilityValue - improvement});
 

@@ -1,0 +1,33 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div class="weapon-sheet-content">
+        <table>
+            <tr>
+                <th>{{localize "dressena.weapon.attackWith"}}</th>
+                <th>{{localize "dressena.weapon.damage"}}</th>
+                <th>{{localize "dressena.weapon.experienceBonus"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="system.attackWith">
+                        {{#select system.attackWith}}
+                        {{#each config.attackTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="system.damage" type="text" value="{{system.damage}}"/>
+                </td>
+                <td>
+                    <input name="system.experienceBonus" type="text" value="{{system.experienceBonus}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

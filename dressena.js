@@ -8,7 +8,8 @@ import dressenaCharacterSheet from "./module/sheets/dressenaCharacterSheet.js";
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/dressena/templates/partials/character-abilities-block.hbs",
-        "systems/dressena/templates/partials/weapon-card.hbs"
+        "systems/dressena/templates/partials/weapon-card.hbs",
+        "systems/dressena/templates/partials/item-effects.hbs"
     ];
     return loadTemplates(templatePaths);
 };
@@ -25,6 +26,8 @@ Hooks.once("init", function() {
     CONFIG.dressena = dressena;
     CONFIG.Actor.documentClass = dressenaActor;
     CONFIG.Item.documentClass = dressenaItem;
+    CONFIG.ActiveEffect.legacyTransferral = false;
+
 //    CONFIG.ChatMessage.documentClass = dressenaChatMessage;
 
   

@@ -1,0 +1,41 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+
+    <div class="spell-sheet-content">
+        <table>
+            <tr>
+                <th>{{localize "dressena.spell.attackWith"}}</th>
+                <th>{{localize "dressena.spell.attackAgainst"}}</th>
+                <th>{{localize "dressena.spell.damage"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="system.spellAttackTypes">
+                        {{#select system.spellAttackTypes}}
+                        {{#each config.spellAttackTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <select name="system.attackAgainst">
+                        {{#select system.attackAgainst}}
+                        {{#each config.attackAgainst as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="system.damage" type="text" value="{{system.damage}}" data-dtype="Number" />
+                </td>
+            </tr>
+        </table>
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+      
+
+</form>

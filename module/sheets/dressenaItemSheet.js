@@ -1,15 +1,25 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.js";
+
 export default class dressenaItemSheet extends ItemSheet {
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             width: 530,
             height:340,
-            classes: ["dressena", "sheet", "item"]
+            classes: ["dressena", "sheet", "item"],
+            tabs: [
+              {
+                navSelector: '.sheet-tabs',
+                contentSelector: '.sheet-content',
+                initial: 'description',
+              },
+            ],
+      
         })
     }
 
     get template() {
-        return `systems/dressena/templates/sheets/${this.item.type}-sheet.html`;
+        return `systems/dressena/templates/sheets/${this.item.type}-sheet.hbs`;
     }
 
     getData() {
@@ -26,6 +36,8 @@ export default class dressenaItemSheet extends ItemSheet {
         // Add the item's data to context.data for easier access, as well as flags.
         context.system = itemData.system;
         context.flags = itemData.flags;
+        context.effects = prepareActiveEffectCategories(this.item.effects);
+
     
         // Prepare active effects for easier access
     

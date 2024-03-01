@@ -38,12 +38,12 @@
   display: flex;
   flex-direction: column;
 }
-.sheet .trait-sheet-content {
+.sheet .sheet-content {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.sheet .trait-sheet-content .editor {
+.sheet .sheet-content .editor {
   height: 100%;
 }
 .sheet form {
