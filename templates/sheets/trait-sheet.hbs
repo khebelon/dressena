@@ -4,13 +4,13 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
 
-    <nav class="sheet-tabs tabs" data-group="primary">
+    <nav class="sheet-tabs" data-group="primary">
       <a class="item" data-tab="description">Description</a>
       <a class="item" data-tab="effects">Effects</a>
     </nav>
 
 
-    <section class="sheet-content">
+    <div class="sheet-content">
         <div class="tab" data-group="primary" data-tab="description">
 
             <table>
@@ -35,8 +35,8 @@
             {{editor system.description target="system.description" button=true owner=owner editable=editable}}
 
         </div>
-        <div class="tab effects" data-group="primary" data-tab="effects">
+        <div class="tab" data-group="primary" data-tab="effects">
             {{> "systems/dressena/templates/partials/item-effects.hbs"}}
         </div> 
-    </section>
+    </div>
 </form>

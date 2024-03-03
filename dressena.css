@@ -60,33 +60,6 @@
 }
 .sheet {
   background: url(img/character-sheet-background.png);
-  /*         nav.tabs {
-            --tab-full-width: 44px;
-            --tab-inactive-width: 34px;
-            position: absolute;
-            left: 100%;
-            top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: .25rem;
-            z-index: -1;
-        
-            > .item {
-              width: 30px;
-              height: 40px;
-              position: relative;
-              display: flex;
-              justify-content: end;
-              align-items: center;
-              padding-right: .75rem;
-              background: rgb(76, 69, 56);
-              color: rgb(151, 108, 27);
-              border: 1px solid transparent;
-              border-radius: 0 8px 8px 0;
-              transition: all 250ms ease;
-        
-
-            }*/
 }
 .sheet .window-content {
   background: url(img/character-sheet-background.png);
@@ -124,6 +97,8 @@
   background: url(img/character-sheet-background.png);
 }
 .sheet .sidebar {
+  position: relative;
+  bottom: 50px;
   margin-top: 7px;
   height: 380px;
   width: 230px;
@@ -194,18 +169,22 @@
   background-color: transparent;
   font-weight: bold;
 }
+.sheet .sheet-content {
+  position: relative;
+  left: 240px;
+  bottom: 430px;
+}
 .sheet .sheet-body {
   width: 100%;
+  position: relative;
 }
 .sheet .combat-actions {
-  width: 450px;
-  margin-left: 70px;
+  width: 480px;
   position: relative;
   font-size: large;
   font-weight: bold;
   font-style: italic;
-  left: 180px;
-  top: 60px;
+  text-align: center;
   color: #4c4538;
   border-image-slice: 27 27 27 27;
   border-image-width: 10px 10px 10px 10px;
@@ -213,19 +192,18 @@
   border-image-source: url(img/character-sheet-border.png);
 }
 .sheet .combat-actions .combatactions-list {
-  position: relative;
-  right: 150px;
+  margin-left: 40px;
+  text-align: left;
   font-size: small;
 }
 .sheet .equipment {
-  width: 450px;
-  margin-left: 70px;
+  width: 480px;
   position: relative;
+  margin-top: 10px;
   font-size: large;
   font-weight: bold;
   font-style: italic;
-  left: 180px;
-  top: 70px;
+  text-align: center;
   color: #4c4538;
   border-image-slice: 27 27 27 27;
   border-image-width: 10px 10px 10px 10px;
@@ -233,29 +211,31 @@
   border-image-source: url(img/character-sheet-border.png);
 }
 .sheet .equipment .armor-list {
+  margin-left: 10px;
   position: relative;
-  right: 150px;
+  text-align: left;
   font-size: small;
 }
 .sheet .equipment .weapon-list {
+  margin-left: 10px;
   position: relative;
-  right: 150px;
+  text-align: left;
   font-size: small;
 }
 .sheet .equipment .item-list {
+  margin-left: 10px;
   position: relative;
-  right: 150px;
+  text-align: left;
   font-size: small;
 }
 .sheet .traits {
-  width: 450px;
-  margin-left: 70px;
+  width: 480px;
+  margin-top: 10px;
   position: relative;
   font-size: large;
   font-weight: bold;
   font-style: italic;
-  left: 180px;
-  top: 60px;
+  text-align: center;
   color: #4c4538;
   border-image-slice: 27 27 27 27;
   border-image-width: 10px 10px 10px 10px;
@@ -263,9 +243,53 @@
   border-image-source: url(img/character-sheet-border.png);
 }
 .sheet .traits .trait-list {
+  margin-left: 10px;
   position: relative;
-  right: 150px;
+  text-align: left;
   font-size: small;
+}
+.sheet .spells {
+  width: 480px;
+  margin-top: 10px;
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color: #4c4538;
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border.png);
+}
+.sheet .spells .spell-list {
+  margin-left: 10px;
+  position: relative;
+  text-align: left;
+  font-size: small;
+}
+.sheet .sheet-tabs {
+  position: absolute;
+  left: 800px;
+  bottom: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: -1;
+}
+.sheet .sheet-tabs > .item {
+  width: 75px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 0.75rem;
+  background: #575756;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 0 8px 8px 0;
+  transition: all 250ms ease;
 }
 .abilities {
   display: grid;

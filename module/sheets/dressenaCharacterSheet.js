@@ -7,7 +7,14 @@ export default class dressenaCharacterSheet extends ActorSheet {
             submitOnClose: true,
             submitOnChange: true,
             template: "systems/dressena/templates/sheets/character-sheet.hbs",
-            classes: ["dressena", "sheet", "Character"]
+            classes: ["dressena", "sheet", "Character"],
+            tabs: [
+              {
+                navSelector: '.sheet-tabs',
+                contentSelector: '.sheet-content',
+                initial: 'description',
+              },
+            ],
         });
     }
 
