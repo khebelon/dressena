@@ -38,12 +38,12 @@
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-content {
+.sheet .sheet-content-item {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-content .editor {
+.sheet .sheet-content-item .editor {
   height: 100%;
 }
 .sheet form {
@@ -161,13 +161,18 @@
   height: 80px;
   text-align: center;
   line-height: 50px;
-  background: transparent url("img/cs-health-button.png") no-repeat center / contain;
+  background: transparent url("img/cs-health-button-2.png") no-repeat center / contain;
   color: white;
   font-size: xx-large;
 }
 .sheet .sidebar .stat {
   background-color: transparent;
   font-weight: bold;
+}
+.sheet .sidebar .religion-frame {
+  border: none;
+  width: 2000px;
+  height: auto;
 }
 .sheet .sheet-content {
   position: relative;
@@ -268,7 +273,7 @@
   text-align: left;
   font-size: small;
 }
-.sheet .sheet-tabs {
+.sheet .sheet-tabs-character {
   position: absolute;
   left: 800px;
   bottom: 380px;
@@ -277,7 +282,7 @@
   gap: 0.25rem;
   z-index: -1;
 }
-.sheet .sheet-tabs > .item {
+.sheet .sheet-tabs-character > .item {
   width: 75px;
   height: 40px;
   position: relative;

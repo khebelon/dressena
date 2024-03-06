@@ -10,7 +10,7 @@ export default class dressenaCharacterSheet extends ActorSheet {
             classes: ["dressena", "sheet", "Character"],
             tabs: [
               {
-                navSelector: '.sheet-tabs',
+                navSelector: '.sheet-tabs-character',
                 contentSelector: '.sheet-content',
                 initial: 'description',
               },

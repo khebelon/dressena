@@ -22,6 +22,17 @@
 	"styles": [
 		"dressena.css"
 	],
+	"packs": [
+		{
+			"name": "dressena-compendium",
+			"label": "Dressena",
+			"system": "dressena",
+			"path": "packs/dressena-compendium.db",
+			"type": "Item",
+			"flags": {}
+	  
+		} 
+	],
 	"gridDistance": 5,
 	"gridUnits": "ft",
 	"primaryTokenAttribute": "health",
@@ -29,5 +40,5 @@
 	"socket": true,
 	"url": "https://github.com/khebelon/dressena/",
     "manifest": "https://raw.githubusercontent.com/khebelon/dressena/main/system.json",
-	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.26.zip"
+	"download": "https://github.com/khebelon/dressena/archive/refs/tags/0.27.zip"
 }

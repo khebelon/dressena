@@ -9,8 +9,8 @@ export default class dressenaItemSheet extends ItemSheet {
             classes: ["dressena", "sheet", "item"],
             tabs: [
               {
-                navSelector: '.sheet-tabs',
-                contentSelector: '.sheet-content',
+                navSelector: '.sheet-tabs-item',
+                contentSelector: '.sheet-content-item',
                 initial: 'description',
               },
             ],
