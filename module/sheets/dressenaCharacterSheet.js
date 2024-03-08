@@ -304,10 +304,18 @@ _onCombatActionRoll(event) {
 //        actorData.system.endurance.value = actorEndurance - enduranceCost;
         let newEndurance = actorEndurance - enduranceCost;
         this.actor.update({"system.endurance.value": newEndurance})
+                  if (item.name=='Restore Endurance') {
+                    console.log("HOLA");
+                    let actorMaxEndurance = actorData.system.endurance.max;
+                    this.actor.update({"system.endurance.value": actorMaxEndurance});
+                
+                  }
         return item.roll(); 
       }
     }
   }
+
+
 }
 
 _onItemRoll (event) {
@@ -320,22 +328,30 @@ _onItemRoll (event) {
   let rollData = item.getRollData();
   const actorData = this.actor;
 
-  if (item.name=="pocion") {
+  if (item.name=="bandage") {
     let newQuantity= item.system.quantity-1;
     item.update({"system.quantity": newQuantity});
-    delay2(100).then(() => useItem(item, itemID, newQuantity, actorData));
+    delay2(100).then(() => useBandage(item, itemID, newQuantity, actorData));
     }
     
 
   }
 
+/*  resetEndurancePool() {
+    const maxEndurance = this.actor.system.endurance.max;
+    const currentEndurance = this.actor.system.endurance.value;
+    console.log("RESETEO A: "+this.actor.name+" DE ENDURANCE: "+currentEndurance+" A ENDURANCE: "+maxEndurance);
+    this.actor.update({ "system.endurance.value": maxEndurance });
+   // this.actor.sheet.render(true);
 
+  }*/
+  
 
 }
 
 
 
-async function useItem(item, itemID, newQuantity, actorData) {
+async function useBandage(item, itemID, newQuantity, actorData) {
   if (item.system.quantity==0) {
     item.delete();
   }
@@ -350,10 +366,15 @@ async function useItem(item, itemID, newQuantity, actorData) {
     
     let actorHealth = actorData.system.health.value;
     let newHealth = actorHealth + cure;
+    let maxHealth = actorData.system.health.max;
+    if (newHealth > maxHealth) {
+      actorData.update({"system.health.value": maxHealth})
+    } else {
     actorData.update({"system.health.value": newHealth})
+    }
 
     let templateContext = {
-      flavor: `Use Potion on ${actorData.name}`,
+      flavor: `Use Bandage on ${actorData.name}`,
       weapon: item.name,
       roll: renderedRoll,
     }
@@ -378,5 +399,4 @@ async function useItem(item, itemID, newQuantity, actorData) {
 function delay2(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
-
 
