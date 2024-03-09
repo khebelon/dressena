@@ -305,7 +305,6 @@ _onCombatActionRoll(event) {
         let newEndurance = actorEndurance - enduranceCost;
         this.actor.update({"system.endurance.value": newEndurance})
                   if (item.name=='Restore Endurance') {
-                    console.log("HOLA");
                     let actorMaxEndurance = actorData.system.endurance.max;
                     this.actor.update({"system.endurance.value": actorMaxEndurance});
                 
