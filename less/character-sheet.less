@@ -1,9 +1,20 @@
 .sheet {
-  background: url(img/character-sheet-background.png);
+
+  @font-face {
+    font-family: 'Gold Lines Serif Trial';
+    src: url('../fonts/Gold Lines Serif Trial.otf') format('truetype');
+    /* Ajusta la ruta según la ubicación de tu archivo de fuente */
+  }
+
+
+ // background: url(img/character-sheet-background2.png);
+ // background-size: cover;
 
 
     .window-content {
-      background: url(img/character-sheet-background.png);
+      background: url(img/character-sheet-background2.png);
+      background-size: cover;
+
 
       input, select, textarea {
         border: none;
@@ -16,7 +27,7 @@
 
     .sheet-header {
       img {
-          position: static;
+          position: relative;
           opacity: 90%;
       }
       .character-name {
@@ -27,6 +38,10 @@
             font-size: x-large;
             background-color: transparent;
             color: white;
+            text-decoration: underline; /* Subrayado por defecto */
+            text-decoration-color: rgb(157, 145, 113); /* Cambia el color del subrayado */
+            text-decoration-thickness: 2px; /* Cambia el grosor del subrayado */
+          
           }
           .class {
             font-size: medium;
@@ -43,20 +58,32 @@
       }
 
       .sidebar {
+        font-family: 'Gold Lines Serif Trial';
+        src: url('../fonts/Gold Lines Serif Trial.otf') format('truetype');
         position: relative;
         bottom: 50px;
         margin-top: 7px;
-        height: 380px;
-        width: 230px;
-        border: 4px solid rgb(157,145,121);
-        background-color: rgb(87, 87, 86);
+//        height: 380px;
+        height: 430px;
+//        width: 230px;
+          width: 270px;
+//        border: 4px solid rgb(157,145,121);
+//        background-color: rgb(87, 87, 86);
         float: left;
+        background-image: url(img/cs-sidebar-border.png);
+//        background-size:  230px 380px;
+          background-size: 270px 430px;
+
+//        border-image-repeat: stretch stretch;        
+//        border-image-source: url(img/cs-sidebar-border.png);
+//        border-image-slice: 27 27 27 27;
+//        border-image-width: 10px 10px 10px 10px;
         
         
         .actor-img2 {
             position: relative;
-            left: 10px;
-            margin-top: 3px;
+            left: 25px;
+            margin-top: 23px;
             border: 2px solid rgb(157,145,121);
 
         }
@@ -70,7 +97,8 @@
             }
             .endurance-stat-value {
               position: relative;
-              right: 115px;
+              bottom: -15px;
+              right: 100px;
               width: 55px;
               height: 55px;
               text-align: center;
@@ -81,7 +109,8 @@
             }
             .ego-stat-value {
               position: relative;
-              left: 150px;
+              bottom: -15px;
+              left: 180px;
               width: 60px;
               height: 60px;
               text-align: center;
@@ -93,7 +122,7 @@
             .defense-stat-value {
               position: relative;
               bottom: -50px;
-              left: 15px;
+              left: 42px;
               width: 60px;
               height: 60px;
               text-align: center;
@@ -104,8 +133,8 @@
             }
             .health-stat-value {
               position: relative;
-              top: -100px;
-              left: 70px;
+              top: -48px;
+              left: -90px;
               width: 80px;
               height: 80px;
               text-align: center;
@@ -114,6 +143,38 @@
               color: white;
               font-size: xx-large;             
             }
+            .health-name {
+              position: relative;
+              font-size: medium;
+              color: white;
+              left: 108px;
+              top: -51px;
+              font-style: normal;
+            }
+            .endurance-name {
+              position: relative;
+              font-size: small;
+              color: white;
+              left: 18px;
+              top: -25px;
+              font-style: normal;
+            }
+            .defense-name {
+              position: relative;
+              font-size: small;
+              color: white;
+              left: 108px;
+              top: -3px;
+              font-style: normal;
+            }
+            .ego-name {
+              position: relative;
+              font-size: small;
+              color: white;
+              left: 199px;
+              top: -9px;
+              font-style: normal;
+            }
             .stat {
               background-color: transparent;
               font-weight: bold;
@@ -121,6 +182,8 @@
 
             
               .religion-frame {
+                position: relative;
+                bottom: -0px;
                 border: none;
                 width: 2000px;
                 height: auto;
@@ -129,18 +192,21 @@
         }
 
     .sheet-content {
+      font-family: 'Gold Lines Serif Trial';
+      src: url('../fonts/Gold Lines Serif Trial.otf') format('truetype');
       position: relative;
-      left: 240px;
+      left: 280px;
       bottom: 430px;
     }
 
     .sheet-body {
         width: 100%;
         position: relative;
+        top: -57px;
           }
           .combat-actions {
+            top: -50px;
             width: 480px;
-
             position: relative;
             font-size: large;
             font-weight: bold;
@@ -161,6 +227,7 @@
           }
 
           .equipment {
+            top: -50px;
             width: 480px;
             position: relative;
             margin-top: 10px;
@@ -222,6 +289,7 @@
           }
 
           .spells {
+            top: -50px;
             width: 480px;
             margin-top: 10px;
             position: relative;

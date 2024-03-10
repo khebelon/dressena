@@ -71,8 +71,9 @@ import { dressena } from "./config.js";
   
     let label = `${rollType}: ${weaponName} to ${targetActor.name}`;
 
-    let rollFormula = `${weaponDamage}+${abilityMod}`;
+    let rollFormula = `${weaponDamage}+${abilityMod}+${weaponBonus}`;
 
+    console.log("EXP BONUS IS: "+weaponBonus);
 
 
     let rollResult = await new Roll(rollFormula).roll({ async: true });

@@ -31,7 +31,8 @@
                 "authority": 1,
                 "occultism": 1,
                 "ego": 3,
-                "defense": 9
+                "defense": 9,
+                "defending": false
             },
             "concept": ""
         },

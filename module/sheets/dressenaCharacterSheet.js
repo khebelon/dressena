@@ -307,8 +307,31 @@ _onCombatActionRoll(event) {
                   if (item.name=='Restore Endurance') {
                     let actorMaxEndurance = actorData.system.endurance.max;
                     this.actor.update({"system.endurance.value": actorMaxEndurance});
-                
+                    let is_defending = actorData.system.defending;
+                    console.log("IS DEFENDING: "+actorData.system.defending);
+                    if (is_defending === true) {
+                        let actorAgility = actorData.system.agility;
+                        let newAgility = actorAgility-3;
+                        this.actor.update({"system.agility": newAgility});
+                        this.actor.update({"system.defending": false});
+                             
+                    }
                   }
+                  if (item.name=='Defend') {
+                        console.log("IS DEFENDING: "+actorData.system.defending);
+                        let is_defending = actorData.system.defending;
+                        if (is_defending === false) {
+                        let actorAgility = actorData.system.agility;
+                        let newAgility = actorAgility+3;
+                        this.actor.update({"system.agility": newAgility});
+                        this.actor.update({"system.defending": true});
+                        } 
+                  }
+/*                  if (item.name=='Restore Defense') {
+                    let actorAgility = actorData.system.agility;
+                    let newAgility = actorAgility-3;
+                    this.actor.update({"system.agility": newAgility});
+                  }*/
         return item.roll(); 
       }
     }
