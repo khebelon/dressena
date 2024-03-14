@@ -4,6 +4,8 @@ import * as Dice from "../dice.js";
 export default class dressenaCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
+            width:830,
+            height: 1000,
             submitOnClose: true,
             submitOnChange: true,
             template: "systems/dressena/templates/sheets/character-sheet.hbs",
@@ -115,6 +117,9 @@ activateListeners(html) {
   html.find(".item-roll").click(this._onItemRoll.bind(this));
   html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
+////////////////
+this._contextMenu(html);
+///////////////
 
 
 
@@ -127,7 +132,62 @@ activateListeners(html) {
       li.addEventListener('dragstart', handler, false);
     });
   }
-}        
+}  
+
+_contextMenu(html) {
+  ContextMenu.create(this, html, ".item", this._getItemContextOptions());
+}
+
+_getItemContextOptions() {
+  const canEdit = function(tr) {
+    let result = false;
+    const itemId = tr.data("item-id");
+
+    if (game.user.isGM) {
+      result = true;
+    }
+    else {
+      result = this.actor.items.find(item => item._id === itemId)
+        ? true
+        : false;
+    }
+
+    return result;
+  };
+
+  return [
+    {
+      name: "Edit",
+      icon: '<i class="fas fa-edit"></i>',
+      condition: element => canEdit(element),
+      callback: element => {
+        const itemId = element.data("item-id");
+        const item = this.actor.items.get(itemId);
+        return item.sheet.render(true);
+      },
+    },
+    {
+      name: "Delete",
+      icon: '<i class="fas fa-trash"></i>',
+      condition: tr => canEdit(tr),
+      callback: tr => {
+        const item = this.actor.items.get(tr.data("itemId"));
+        item.delete();
+      },
+    },
+  ];
+}
+
+
+
+
+_onItemDelete(itemId) {
+  const itemData = this.actor.getEmbeddedDocument("Item", itemId);
+  this.actor.deleteEmbeddedDocuments(element.data("item-id"));
+}
+
+
+
 
 /**
  * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset

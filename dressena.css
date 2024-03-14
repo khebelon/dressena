@@ -252,6 +252,13 @@
   text-align: left;
   font-size: small;
 }
+.sheet .combat-actions .combatactions-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
+}
 .sheet .equipment {
   top: -50px;
   width: 480px;
@@ -273,17 +280,41 @@
   text-align: left;
   font-size: small;
 }
+.sheet .equipment .armor-list .item-formula {
+  line-height: 20px;
+}
+.sheet .equipment .armor-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
+}
 .sheet .equipment .weapon-list {
   margin-left: 10px;
   position: relative;
   text-align: left;
   font-size: small;
 }
+.sheet .equipment .weapon-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
+}
 .sheet .equipment .item-list {
   margin-left: 10px;
   position: relative;
   text-align: left;
   font-size: small;
+}
+.sheet .equipment .item-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
 }
 .sheet .traits {
   width: 480px;
@@ -304,6 +335,13 @@
   position: relative;
   text-align: left;
   font-size: small;
+}
+.sheet .traits .trait-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
 }
 .sheet .spells {
   top: -50px;
@@ -326,10 +364,17 @@
   text-align: left;
   font-size: small;
 }
+.sheet .spells .spell-list .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.375rem;
+  border-bottom: 1px dotted #bbb;
+}
 .sheet .sheet-tabs-character {
   position: absolute;
-  left: 800px;
-  bottom: 380px;
+  left: 830px;
+  bottom: 580px;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -355,6 +400,11 @@
   grid-template-columns: 240px 240px;
   grid-template-rows: 100px 100px;
   font-style: normal;
+  /* .sheet-physics-block {
+            border-radius: 10px; // Define el radio del borde redondeado según tu preferencia
+            opacity: 0.5; // Aplica la opacidad utilizando la variable definida anteriormente
+            background-color: rgb(157, 145, 121); // Define el color de fondo con una opacidad específica
+    }*/
 }
 .abilities ul {
   list-style-type: none;
@@ -422,7 +472,7 @@
   font-style: italic;
   margin-top: 5px;
 }
-.abilities .sheet-intelect-list {
+.abilities .sheet-intelect-block {
   margin-top: 40px;
   margin-left: 10px;
   height: 185px;
@@ -436,12 +486,12 @@
   background-size: cover;
   width: 230px;
 }
-.abilities .sheet-intelect-list .characteristic {
+.abilities .sheet-intelect-block .characteristic {
   margin-left: 55px;
   font-size: large;
   font-weight: bold;
 }
-.abilities .sheet-intelect-list .stat {
+.abilities .sheet-intelect-block .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;
@@ -454,7 +504,7 @@
   font-style: italic;
   margin-top: 5px;
 }
-.abilities .sheet-psyque-list {
+.abilities .sheet-psyque-block {
   margin-top: 40px;
   margin-left: 10px;
   height: 185px;
@@ -468,12 +518,12 @@
   background-size: cover;
   width: 230px;
 }
-.abilities .sheet-psyque-list .characteristic {
+.abilities .sheet-psyque-block .characteristic {
   margin-left: 60px;
   font-size: large;
   font-weight: bold;
 }
-.abilities .sheet-psyque-list .stat {
+.abilities .sheet-psyque-block .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;

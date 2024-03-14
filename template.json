@@ -1,6 +1,7 @@
 {
     "Actor":{
         "types": ["warrior", "hunter", "criminal", "devout", "scholar"],
+        "god": ["omuh", "isaah", "vulda", "nashur"],
         "templates": {
             "abilities": {
                 "meleeWeaponHandling": 1,

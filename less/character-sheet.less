@@ -203,7 +203,8 @@
         width: 100%;
         position: relative;
         top: -57px;
-          }
+               
+      }
           .combat-actions {
             top: -50px;
             width: 480px;
@@ -218,10 +219,21 @@
             border-image-repeat: stretch stretch;
             border-image-source: url(img/character-sheet-border.png);
 
+
             .combatactions-list {
               margin-left: 40px;
               text-align: left;
               font-size: small;
+            
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+            
+            
             }
 
           }
@@ -246,6 +258,20 @@
               position: relative;
               text-align: left;
               font-size: small;
+
+              .item-formula {
+                line-height: 20px;
+              }
+
+
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+
             }
 
             .weapon-list {
@@ -253,6 +279,15 @@
               position: relative;
               text-align: left;
               font-size: small;
+
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+
             }
 
             .item-list  {
@@ -260,6 +295,16 @@
               position: relative;
               text-align: left;
               font-size: small;
+
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+
+
             }
 
           }
@@ -284,6 +329,16 @@
               position: relative;
               text-align: left;
               font-size: small;
+            
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+            
+            
             }
 
           }
@@ -308,6 +363,15 @@
               position: relative;
               text-align: left;
               font-size: small;
+            
+              .item {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                padding: .375rem;
+                border-bottom:1px dotted #bbb;              
+            }
+            
             }
 
           }
@@ -318,8 +382,8 @@
 //            --tab-full-width: 44px;
 //            --tab-inactive-width: 34px;
             position: absolute;
-            left: 800px;
-            bottom: 380px;
+            left: 830px;
+            bottom: 580px;
             display: flex;
             flex-direction: column;
             gap: .25rem;
