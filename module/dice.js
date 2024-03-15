@@ -14,6 +14,7 @@ import { dressena } from "./config.js";
     askForOptions = true } = {}) {
     const messageTemplate = "systems/dressena/templates/chat/weapon-chat.hbs";
   
+    
     let label = `${rollType}: ${weaponName} to ${targetActor.name}`;
     let result = null;
     let rollFormula = `1d10+${combatStrategy}+${abilityMod}`;

@@ -33,7 +33,9 @@
                 "occultism": 1,
                 "ego": 3,
                 "defense": 9,
-                "defending": false
+                "defending": false,
+                "rangedWeaponBonus": false,
+                "meleeWeaponBonus": false
             },
             "concept": ""
         },

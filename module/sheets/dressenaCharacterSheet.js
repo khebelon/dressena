@@ -263,17 +263,34 @@ _onWeaponRoll(event) {
   let combatStrategy = actorData.system.combatStrategy;
 
 
+  let rangedBonus = actorData.system.rangedWeaponBonus;
+  let meleeBonus = actorData.system.meleeWeaponBonus;
+ 
+
+  console.log("RANGED WEAPON BONUS IS: "+rangedBonus);
+  if ((weaponAbility === "melee" && meleeBonus === false) || (weaponAbility === "ranged" && rangedBonus === false)) {
+      weaponBonus = 0;
+  }
+
 
   if (weaponAbility === "melee") {
   abilityMod = this.actor.system.meleeWeaponHandling;
   }
 
+  let actorEndurance = actorData.system.endurance.value
+  if (actorEndurance === 0) {
+    return;
+  }
+  let WeaponAttackEndurance = actorEndurance-1;
+
   switch (weaponAbility) {
     case 'melee':
       abilityMod = this.actor.system.meleeWeaponHandling;
+      this.actor.update({"system.endurance.value": WeaponAttackEndurance})
         break;
     case 'ranged':
     abilityMod = this.actor.system.rangedWeaponHandling;
+    this.actor.update({"system.endurance.value": WeaponAttackEndurance})
       break;
     case 'ego':
       abilityMod = this.actor.system.ego;
@@ -287,10 +304,12 @@ _onWeaponRoll(event) {
  
     }
 
-
+  
   const targets = Array.from(game.user.targets);
 
-
+  if (targets.length === 0) {
+    console.log("ACTOR IS NULL");
+  }
   const targetActor = targets[0].actor;
   const targetDefense = targets[0].actor.system.defense;
 
@@ -356,6 +375,9 @@ _onCombatActionRoll(event) {
   let enduranceCost = item.system.enduranceCost
   let actorEndurance = actorData.system.endurance.value
 
+  if (actorEndurance === 0 && enduranceCost != 0) {
+    return;
+  }
   if (dataset.rollType) {
     if (dataset.rollType == 'item') {
       const itemId = element.closest('.item').dataset.itemId;
