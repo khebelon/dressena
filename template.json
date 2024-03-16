@@ -1,11 +1,6 @@
 {
     "Actor":{
         "types": ["warrior", "hunter", "criminal", "devout", "scholar"],
-        "god": ["omuh", "isaah", "vulda", "nashur"],
-        "condition": {
-            "type": ["ok", "massiveDamage", "unconscious", "bleeding", "dead", "disarmed", "poisoned", "blind", "starvation", "dehydration", "addicted", "exhausted", "burned", "frozen"],
-            "default": "ok"
-        },
         "templates": {
             "abilities": {
                 "meleeWeaponHandling": 1,
@@ -41,22 +36,37 @@
                 "rangedWeaponBonus": false,
                 "meleeWeaponBonus": false
             },
-            "concept": ""
+            "concept": "",
+            "conditions": {
+                "massiveDamage": false,
+                "unconscious": false,
+                "bleeding": false,
+                "dead": false,
+                "disarmed": false,
+                "poisoned": false,
+                "blinded": false,
+                "starvation": false,
+                "dehydration": false,
+                "addicted": false,
+                "exhausted": 0,
+                "burned": false,
+                "frozen": false
+            }
         },
         "warrior": {
-                "templates": ["abilities"]
+                "templates": ["abilities", "conditions"]
             },
         "hunter": {
-                "templates": ["abilities"]
+                "templates": ["abilities", "conditions"]
             },            
         "criminal": {
-                "templates": ["abilities"]
+                "templates": ["abilities", "conditions"]
             },            
         "devout": {
-                "templates": ["abilities"]
+                "templates": ["abilities", "conditions"]
             },            
         "scholar": {
-                "templates": ["abilities"]
+                "templates": ["abilities", "conditions"]
             }
         },
 
