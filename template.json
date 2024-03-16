@@ -2,6 +2,10 @@
     "Actor":{
         "types": ["warrior", "hunter", "criminal", "devout", "scholar"],
         "god": ["omuh", "isaah", "vulda", "nashur"],
+        "condition": {
+            "type": ["ok", "massiveDamage", "unconscious", "bleeding", "dead", "disarmed", "poisoned", "blind", "starvation", "dehydration", "addicted", "exhausted", "burned", "frozen"],
+            "default": "ok"
+        },
         "templates": {
             "abilities": {
                 "meleeWeaponHandling": 1,

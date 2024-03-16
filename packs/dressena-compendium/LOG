@@ -1,15 +1,8 @@
-2024/03/15-00:01:17.745 83c0 Recovering log #87
-2024/03/15-00:01:17.748 83c0 Delete type=0 #87
-2024/03/15-00:01:17.748 83c0 Delete type=3 #86
-2024/03/15-01:33:24.482 147c Level-0 table #91: started
-2024/03/15-01:33:24.484 147c Level-0 table #91: 5249 bytes OK
-2024/03/15-01:33:24.485 147c Delete type=0 #89
-2024/03/15-01:33:24.496 147c Manual compaction at level-0 from '!folders!WVhcCAdO7EedbehA' @ 72057594037927935 : 1 .. '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 0 : 0; will stop at (end)
-2024/03/15-01:33:24.509 147c Manual compaction at level-1 from '!folders!WVhcCAdO7EedbehA' @ 72057594037927935 : 1 .. '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 0 : 0; will stop at '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 149 : 1
-2024/03/15-01:33:24.509 147c Compacting 1@1 + 1@2 files
-2024/03/15-01:33:24.512 147c Generated table #92@1: 94 keys, 16281 bytes
-2024/03/15-01:33:24.512 147c Compacted 1@1 + 1@2 files => 16281 bytes
-2024/03/15-01:33:24.513 147c compacted to: files[ 0 0 1 0 0 0 0 ]
-2024/03/15-01:33:24.514 147c Delete type=2 #25
-2024/03/15-01:33:24.514 147c Delete type=2 #91
-2024/03/15-01:33:24.514 147c Manual compaction at level-1 from '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 149 : 1 .. '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 0 : 0; will stop at (end)
+2024/03/16-05:26:31.598 4a94 Recovering log #95
+2024/03/16-05:26:31.601 4a94 Delete type=0 #95
+2024/03/16-05:26:31.601 4a94 Delete type=3 #93
+2024/03/16-05:37:12.064 55d8 Level-0 table #100: started
+2024/03/16-05:37:12.064 55d8 Level-0 table #100: 0 bytes OK
+2024/03/16-05:37:12.065 55d8 Delete type=0 #98
+2024/03/16-05:37:12.065 55d8 Manual compaction at level-0 from '!folders!WVhcCAdO7EedbehA' @ 72057594037927935 : 1 .. '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 0 : 0; will stop at (end)
+2024/03/16-05:37:12.065 55d8 Manual compaction at level-1 from '!folders!WVhcCAdO7EedbehA' @ 72057594037927935 : 1 .. '!items.effects!wxHHiV51ByObG19Z.pT5IRnfrjvbsvNjd' @ 0 : 0; will stop at (end)

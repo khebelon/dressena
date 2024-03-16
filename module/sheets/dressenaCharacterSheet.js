@@ -265,7 +265,7 @@ _onWeaponRoll(event) {
 
   let rangedBonus = actorData.system.rangedWeaponBonus;
   let meleeBonus = actorData.system.meleeWeaponBonus;
- 
+  console.log (actorData);
 
   console.log("RANGED WEAPON BONUS IS: "+rangedBonus);
   if ((weaponAbility === "melee" && meleeBonus === false) || (weaponAbility === "ranged" && rangedBonus === false)) {
