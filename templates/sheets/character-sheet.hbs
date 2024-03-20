@@ -193,8 +193,15 @@
 
 
         </section>
-                <div class="condition">
-                    Condition2: {{system.conditions.massiveDamage}}
+                <div class="conditions">
+                       Condition:
+                    {{#each system.conditions}}
+                        {{#if (or (eq this.value true) (gt this.value 0))}}
+                            <a class='condition' data-tooltip='{{this.name}}' data-tooltip-direction="LEFT"><img src='{{this.ico}}' width="50" height="50"></a>
+                        {{else}}
+                        {{/if}}
+                    {{/each}}
+                 
                 </div>   
 
 </form>

@@ -1,5 +1,7 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.js";
 import * as Dice from "../dice.js";
+import * as Conditions from "../helpers/conditions.js";
+
 
 export default class dressenaCharacterSheet extends ActorSheet {
     static get defaultOptions() {
@@ -313,7 +315,6 @@ _onWeaponRoll(event) {
   const targetActor = targets[0].actor;
   const targetDefense = targets[0].actor.system.defense;
 
-
   let attack = Dice.WeaponAttack(
     {
       rollType: "Attack Roll",
@@ -330,35 +331,48 @@ _onWeaponRoll(event) {
     }
   )
 
+
   const evalAttack = async () => {
     let attackOutcome = await attack;
 
-    if (attackOutcome=="HIT") {
-      function delay(time) {
-         return new Promise(resolve => setTimeout(resolve, time));
-      }
-      
-      delay(3000).then(() =>   Dice.WeaponDamage(
-        {
-          rollType: "Damage Roll",
-          weaponName: weaponName,
-          weaponAbility: weaponAbility,
-          weaponDamage: weaponDamage,
-          weaponName: weaponName,
-          description: rollData.description,
-          weaponBonus: weaponBonus,
-          abilityMod: abilityMod,
-          combatStrategy: combatStrategy,
-          targetDefense: targetDefense,
-          targetActor: targetActor
+    if (attackOutcome == "HIT") {
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
         }
-      )             );
-    
-      }
 
-  };
+        // Wait for the delay before calling WeaponDamage
+        await delay(3000);
+
+        // Call WeaponDamage and await its result
+        const weaponDamageResult = await Dice.WeaponDamage({
+            rollType: "Damage Roll",
+            weaponName: weaponName,
+            weaponAbility: weaponAbility,
+            weaponDamage: weaponDamage,
+            weaponName: weaponName,
+            description: rollData.description,
+            weaponBonus: weaponBonus,
+            abilityMod: abilityMod,
+            combatStrategy: combatStrategy,
+            targetDefense: targetDefense,
+            targetActor: targetActor
+        });
+
+        await delay(3000);
+
+        const ConditionResult = await Conditions.ConditionsManager({
+          weaponDamageResult: weaponDamageResult,
+          targetActor: targetActor
+        });
+
+
+
+
+    }
+};
 
 evalAttack();
+
 
 }
 
@@ -409,11 +423,7 @@ _onCombatActionRoll(event) {
                         this.actor.update({"system.defending": true});
                         } 
                   }
-/*                  if (item.name=='Restore Defense') {
-                    let actorAgility = actorData.system.agility;
-                    let newAgility = actorAgility-3;
-                    this.actor.update({"system.agility": newAgility});
-                  }*/
+
         return item.roll(); 
       }
     }
@@ -441,15 +451,7 @@ _onItemRoll (event) {
 
   }
 
-/*  resetEndurancePool() {
-    const maxEndurance = this.actor.system.endurance.max;
-    const currentEndurance = this.actor.system.endurance.value;
-    console.log("RESETEO A: "+this.actor.name+" DE ENDURANCE: "+currentEndurance+" A ENDURANCE: "+maxEndurance);
-    this.actor.update({ "system.endurance.value": maxEndurance });
-   // this.actor.sheet.render(true);
-
-  }*/
-  
+ 
 
 }
 
@@ -503,4 +505,3 @@ async function useBandage(item, itemID, newQuantity, actorData) {
 function delay2(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
-

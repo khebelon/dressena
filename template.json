@@ -38,19 +38,73 @@
             },
             "concept": "",
             "conditions": {
-                "massiveDamage": false,
-                "unconscious": false,
-                "bleeding": false,
-                "dead": false,
-                "disarmed": false,
-                "poisoned": false,
-                "blinded": false,
-                "starvation": false,
-                "dehydration": false,
-                "addicted": false,
-                "exhausted": 0,
-                "burned": false,
-                "frozen": false
+                "conditions": {
+                    "massiveDamage": {
+                        "name": "Massive Damage", 
+                        "value": false,
+                        "ico": "systems/dressena/img/conditions/condition.png"
+                    },
+                    "unconscious": {
+                        "name": "Unconscious",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "bleeding": {
+                        "name": "Bleeding",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "dead":  {
+                        "name": "Dead",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "disarmed":  {
+                        "name": "Disarmed",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "poisoned":  {
+                        "name": "Poisoned",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "blinded":  {
+                        "name": "Blinded",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "starvation":  {
+                        "name": "Starvation",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "dehydration":  {
+                        "name": "Dehydration",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "addicted":  {
+                        "name": "Addicted",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "exhausted":  {
+                        "name": "Exhausted",
+                        "value": 0,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "burned":  {
+                        "name": "Burned",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    },
+                    "frozen":  {
+                        "name":"Frozen",
+                        "value": false,
+                        "ico":"systems/dressena/img/conditions/condition.png"
+                    }
+                }
             }
         },
         "warrior": {

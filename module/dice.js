@@ -20,8 +20,8 @@ import { dressena } from "./config.js";
     let rollFormula = `1d10+${combatStrategy}+${abilityMod}`;
 
 
-    let rollResult = await new Roll(rollFormula).roll({ async: true });
-    let renderedRoll = await rollResult.render();
+   let rollResult = await new Roll(rollFormula).roll({ async: true });
+   let renderedRoll = await rollResult.render();
   
     let attackRoll = rollResult.total;
     let output = null;
@@ -104,6 +104,5 @@ import { dressena } from "./config.js";
     let newHealth = targetActor.system.health.value - damageRoll;
     targetActor.update({"system.health.value": newHealth})
 
-
+    return damageRoll;
   }
-
