@@ -34,7 +34,9 @@
                 "defense": 9,
                 "defending": false,
                 "rangedWeaponBonus": false,
-                "meleeWeaponBonus": false
+                "meleeWeaponBonus": false,
+                "level": 1,
+                "rolepoints": 0
             },
             "concept": "",
             "conditions": {

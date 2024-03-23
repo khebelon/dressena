@@ -14,9 +14,17 @@
         <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
         <div class="class">
             {{actor.type}}
+        </div>      
+        </div>        
+        <div class="character-level">
+        <input class="level-value" name="system.level" value="{{system.level}}" data-dtype="Number">
         </div>
+        <div class="character-rolepoints">
+        <input class="role-points" name="system.rolepoints" value="{{system.rolepoints}}" data-dtype="Number">
         </div>
+
     </div>
+
 
 
     <nav class="sheet-tabs-character" data-group="primary">
@@ -54,6 +62,17 @@
 
 
                     </div>
+                    <div class="conditions">
+                    <div class="conditions-title">CONDITIONS</div>
+                    <div class="conditions-images">
+                    {{#each system.conditions}}
+                        {{#if (or (eq this.value true) (gt this.value 0))}}
+                            <a class='condition' data-tooltip='{{this.name}}' data-tooltip-direction="LEFT"><img src='{{this.ico}}' width="40" height="40"></a>
+                        {{else}}
+                        {{/if}}
+                    {{/each}}
+                    </div>
+                </div>  
                 </div> 
          
         </div>
@@ -193,16 +212,10 @@
 
 
         </section>
-                <div class="conditions">
-                       Condition:
-                    {{#each system.conditions}}
-                        {{#if (or (eq this.value true) (gt this.value 0))}}
-                            <a class='condition' data-tooltip='{{this.name}}' data-tooltip-direction="LEFT"><img src='{{this.ico}}' width="50" height="50"></a>
-                        {{else}}
-                        {{/if}}
-                    {{/each}}
-                 
-                </div>   
+ 
+
+
+
 
 </form>
 

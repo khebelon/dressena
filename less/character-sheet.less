@@ -49,9 +49,40 @@
             font-style: oblique;
             margin-left: 10px;
           }
-      }  
-    }
+      }
       
+      .level-value {
+        position: absolute;
+        margin-left: 693px;
+        margin-top: -130px;
+        width: 65px;
+        height: 65px;
+        text-align: center;
+        line-height: 50px;
+        background: transparent url("img/cs-level.png") no-repeat center / contain;
+        color: rgb(0, 0, 0);
+        font-size: xx-large;           
+      }
+
+      .role-points {
+        position: absolute;
+        margin-left: 692px;
+        margin-top: -230px;
+        width: 68px;
+        height: 68px;
+        text-align: center;
+        line-height: 50px;
+        background: transparent url("img/cs-role-points.png") no-repeat center / contain;
+        color: rgb(0, 0, 0);
+        font-size: xx-large;           
+      }
+
+    }
+
+
+
+
+
       .flex-container {
         background: url(img/character-sheet-background.png);
 
@@ -203,6 +234,33 @@
         width: 100%;
         position: relative;
         top: -57px;
+
+
+        .conditions {
+          width: 470px;
+          position: relative;
+          bottom: -150px;
+          margin-left: 12px;
+          color: rgb(76, 69, 56);
+          border-image-slice: 27 27 27 27;
+          border-image-width: 10px 10px 10px 10px;
+          border-image-repeat: stretch stretch;
+          border-image-source: url(img/character-sheet-border.png);
+        
+          .conditions-title {
+            text-align: center;
+            position: relative;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+          }
+
+          .conditions-images {
+            margin-left: 5px;
+            margin-bottom: 10px;
+
+          }
+        }
                
       }
           .combat-actions {

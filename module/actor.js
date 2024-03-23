@@ -43,6 +43,7 @@ export class dressenaActor extends Actor {
       this._prepareNpcData(actorData);
       this._UpdateDefense(actorData);
       this._ManageCombatActions(actorData);
+      this._ManageAbilities(actorData);
    //   this._UpdateTraits(actorData);
     }
   
@@ -134,7 +135,8 @@ export class dressenaActor extends Actor {
         armorEquipped = armorData.equipped;
         stealthReduction= armorData.stealthReduction;
       });
-      systemData.defense = systemData.endurance.value+systemData.agility+armorBonus;
+      let newDefense = systemData.endurance.value+systemData.agility+armorBonus;
+      actorData.update({"system.defense": newDefense});
 
     }
 
@@ -168,6 +170,126 @@ export class dressenaActor extends Actor {
 
   }
 
+  _ManageAbilities(actorData) {
+    const systemData = actorData.system;
 
-  } 
-  
+    let weakChar = 0;
+    let strongChar = 0;
+    let weakHealth = 0;
+    let strongHealth = 0;
+
+    if (systemData.level == "1") {
+      weakChar = 1;
+      strongChar = 2;
+      weakHealth = 12;
+      strongHealth = 14
+    }
+    if (systemData.level == "2") {
+      weakChar = 1;
+      strongChar = 2;
+      weakHealth = 15;
+      strongHealth = 18
+    }
+    if (systemData.level == "3") {
+      weakChar = 1;
+      strongChar = 3;
+      weakHealth = 18;
+      strongHealth = 21
+    }
+    if (systemData.level == "4") {
+      weakChar = 2;
+      strongChar = 3;
+      weakHealth = 22;
+      strongHealth = 26
+    }
+    if (systemData.level == "5") {
+      weakChar = 2;
+      strongChar = 4;
+      weakHealth = 26;
+      strongHealth = 30
+    }
+    if (systemData.level == "6") {
+      weakChar = 2;
+      strongChar = 4;
+      weakHealth = 30;
+      strongHealth = 35
+    }
+    if (systemData.level == "7") {
+      weakChar = 3;
+      strongChar = 5;
+      weakHealth = 35;
+      strongHealth = 39
+    }
+    if (systemData.level == "8") {
+      weakChar = 3;
+      strongChar = 5;
+      weakHealth = 38;
+      strongHealth = 43
+    }
+    if (systemData.level == "9") {
+      weakChar = 4;
+      strongChar = 5;
+      weakHealth = 42;
+      strongHealth = 48;
+    }
+    if (systemData.level == "10") {
+      weakChar = 4;
+      strongChar = 6;
+      weakHealth = 46;
+      strongHealth = 53;
+    }
+
+
+      
+      if (actorData.type == "warrior") {
+        actorData.update({"system.meleeWeaponHandling": strongChar});
+        actorData.update({"system.health.max": strongHealth});
+        actorData.update({"system.endurance.max": strongChar});
+        actorData.update({"system.rangedWeaponHandling": weakChar});
+        actorData.update({"system.agility": weakChar});
+        actorData.update({"system.fineMotor": weakChar});
+        actorData.update({"system.stealth": weakChar});
+        actorData.update({"system.exteriorWorld": weakChar});
+        actorData.update({"system.logic": weakChar});
+        actorData.update({"system.suggestion": weakChar});
+        actorData.update({"system.combatStrategy": weakChar});
+        actorData.update({"system.metaphysics": weakChar});
+        actorData.update({"system.survival": weakChar});
+        actorData.update({"system.encyclopedia": weakChar});
+        actorData.update({"system.ethics": weakChar});
+        actorData.update({"system.painThreshold": weakChar});
+        actorData.update({"system.valor": weakChar});
+        actorData.update({"system.rhetoric": weakChar});
+        actorData.update({"system.volition": weakChar});
+        actorData.update({"system.authority": weakChar});
+        actorData.update({"system.occultism": weakChar});
+      }
+      if (actorData.type == "hunter") {
+        actorData.update({"system.meleeWeaponHandling": weakChar});
+        actorData.update({"system.health.max": weakHealth});
+        actorData.update({"system.endurance.max": weakChar});
+        actorData.update({"system.rangedWeaponHandling": strongChar});
+        actorData.update({"system.agility": strongChar});
+        actorData.update({"system.fineMotor": strongChar});
+        actorData.update({"system.stealth": strongChar});
+        actorData.update({"system.exteriorWorld": weakChar});
+        actorData.update({"system.logic": weakChar});
+        actorData.update({"system.suggestion": weakChar});
+        actorData.update({"system.combatStrategy": weakChar});
+        actorData.update({"system.metaphysics": weakChar});
+        actorData.update({"system.survival": weakChar});
+        actorData.update({"system.encyclopedia": weakChar});
+        actorData.update({"system.ethics": weakChar});
+        actorData.update({"system.painThreshold": weakChar});
+        actorData.update({"system.valor": weakChar});
+        actorData.update({"system.rhetoric": weakChar});
+        actorData.update({"system.volition": weakChar});
+        actorData.update({"system.authority": weakChar});
+        actorData.update({"system.occultism": weakChar});
+      }
+
+    } 
+
+
+    }
+

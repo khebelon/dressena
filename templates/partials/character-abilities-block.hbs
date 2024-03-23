@@ -2,6 +2,7 @@
     <section class="sheet-physics-block">
         <ul class="sheet-physics-list">
             <div class="characteristic"> PHYSICS </div>
+            <div class="physics-abilities">
             <li>
                 <a class="rollable" data-roll="d10+{{system.meleeWeaponHandling}}" data-label="Melee Weapon Handling"><i class="fas fa-dice"></i></a>
                 <input class="stat" name="system.meleeWeaponHandling" value="{{system.meleeWeaponHandling}}" data-dtype="Number">
@@ -17,11 +18,13 @@
                 <input class="stat" name="system.endurance.max" value="{{system.endurance.max}}" data-dtype="Number">
                 {{localize "dressena.ability.endurance"}}
             </li>
+            </div>
             </ul>
     </section>
     <section class="sheet-finesse-block">      
             <ul class="sheet-finesse-list">
-            <div class="characteristic"> FINESSE </div>               
+            <div class="characteristic"> FINESSE </div> 
+            <div class="finesse-abilities">              
                 <li>
                     <a class="rollable" data-roll="d10+{{system.rangedWeaponHandling}}" data-label="Ranged Weapon Handling"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.rangedWeaponHandling" value="{{system.rangedWeaponHandling}}" data-dtype="Number">
@@ -43,11 +46,13 @@
                     <input class="stat" name="system.stealth" value="{{system.stealth}}" data-dtype="Number">
                     {{localize "dressena.ability.stealth"}}
                 </li>
+                </div>
                 </ul>
     </section>
     <section class="sheet-intelect-block">      
             <ul class="sheet-intelect-list">
                 <div class="characteristic"> INTELECT </div>
+                <div class="intelect-abilities">
                 <li>
                     <a class="rollable" data-roll="d10+{{system.exteriorWorld}}" data-label="Exterior World"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.exteriorWorld" value="{{system.exteriorWorld}}" data-dtype="Number">
@@ -83,11 +88,13 @@
                     <input class="stat" name="system.encyclopedia" value="{{system.encyclopedia}}" data-dtype="Number">
                     {{localize "dressena.ability.encyclopedia"}}
                 </li>
+                </div>
                 </ul>
     </section>
     <section class="sheet-psyque-block">      
             <ul class="sheet-psyque-list">
                 <div class="characteristic"> PSYQUE </div>
+                <div class="psyque-abilities">
                 <li>
                     <a class="rollable" data-roll="d10+{{system.ethics}}" data-label="Ethics"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.ethics" value="{{system.ethics}}" data-dtype="Number">
@@ -123,6 +130,7 @@
                     <input class="stat" name="system.occultism" value="{{system.occultism}}" data-dtype="Number">
                     {{localize "dressena.ability.occultism"}}
                 </li>
+                </div>
                 </ul>
     </section>
 

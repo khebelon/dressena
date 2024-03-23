@@ -11,61 +11,75 @@
         list-style-type: none;
     }
 
-   /* .sheet-physics-block {
-            border-radius: 10px; // Define el radio del borde redondeado según tu preferencia
-            opacity: 0.5; // Aplica la opacidad utilizando la variable definida anteriormente
-            background-color: rgb(157, 145, 121); // Define el color de fondo con una opacidad específica
-    }*/
+   
+        .sheet-physics-list {
+            margin-left: 10px;
+            border: 2px solid rgba(157, 145, 121, 0.54);
+            border-radius: 10px;
+            background-color: rgba(157, 145, 121, 0.54);
+            background-size: cover;
+            height: 120px;
+            width: 230px;
 
-    .sheet-physics-list {
-        margin-left: 10px;
-        border-image-slice: 27 27 27 27;
-        border-image-width: 10px 10px 10px 10px;
-        border-image-outset: 0px 0px 0px 0px;
-        border-image-repeat: stretch stretch;
-        border-image-source: url(img/character-sheet-border.png);  
-        background-image: url(img/cs-characteristic-background.png);
-        background-position: center;
-        background-size: cover;
-        height: 120px;
-        width: 230px;
-        .characteristic {
-            margin-left: 60px;
-            font-size: large;
-            font-weight: bold;
-            margin-bottom: 11px;
-        }
-        .stat {
-            font-weight: bold;
-            width: 25px;
-            background-color: transparent;
-            background-image: url(img/cs-endurance-button.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 1%;
-            color: white;
-            font-style: italic;
-            margin-top: 5px;
-        }
+            .characteristic {
+                margin-left: 55px;
+                font-size: large;
+                font-weight: bold;
+            }
+
+            .physics-abilities {
+                margin-top: 10px;
+                border-image-slice: 27 27 27 27;
+                border-image-width: 10px 10px 10px 10px;
+                border-image-outset: 0px 0px 5px 20px;
+                border-image-repeat: stretch stretch;
+                border-image-source: url(img/character-sheet-border2.png);  
+                background-size: cover;
+                left: -130px;
+                top: 20px;
+            
+
+            .stat {
+                font-weight: bold;
+                width: 25px;
+                background-color: transparent;
+                background-image: url(img/cs-endurance-button.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 1%;
+                color: white;
+                font-style: italic;
+                margin-top: 5px;
+                }
+            }
     }
+
+
+
     .sheet-finesse-list {
         margin-left: 10px;
-        border-image-slice: 27 27 27 27;
-        border-image-width: 10px 10px 10px 10px;
-        border-image-outset: 0px 0px 0px 0px;
-        border-image-repeat: stretch stretch;
-        border-image-source: url(img/character-sheet-border.png);
-        background-image: url(img/cs-characteristic-background.png);
-        background-position: center;
+        border: 2px solid rgba(157, 145, 121, 0.54);
+        border-radius: 10px;
+        background-color: rgba(157, 145, 121, 0.54);
         background-size: cover;
         height: 120px;
         width: 230px;
+
         .characteristic {
             margin-left: 60px;
             font-size: large;
             font-weight: bold;
         }
+        .finesse-abilities {
+            border-image-slice: 27 27 27 27;
+            border-image-width: 10px 10px 10px 10px;
+            border-image-outset: 0px 0px 5px 20px;
+            border-image-repeat: stretch stretch;
+            border-image-source: url(img/character-sheet-border2.png);  
+            background-size: cover;
+            left: -130px;
+
         .stat {
             font-weight: bold;
             width: 25px;
@@ -80,17 +94,16 @@
             margin-top: 5px;
         }
     }
+}
+
     .sheet-intelect-block {
         margin-top: 40px;
         margin-left: 10px;
-        height: 185px;
-        border-image-slice: 27 27 27 27;
-        border-image-width: 10px 10px 10px 10px;
-        border-image-outset: 0px 0px 0px 0px;
-        border-image-repeat: stretch stretch;
-        border-image-source: url(img/character-sheet-border.png);
-        background-image: url(img/cs-characteristic-background.png);
-        background-position: center;
+        height: 195px;
+        border: 2px solid rgba(157, 145, 121, 0.54);
+        border-radius: 10px;
+        background-color: rgba(157, 145, 121, 0.54);
+        background-size: cover;
         background-size: cover;
         width: 230px;
         .characteristic {
@@ -98,6 +111,14 @@
             font-size: large;
             font-weight: bold;
         }
+        .intelect-abilities {
+            border-image-slice: 27 27 27 27;
+            border-image-width: 10px 10px 10px 10px;
+            border-image-outset: 0px 0px 5px 20px;
+            border-image-repeat: stretch stretch;
+            border-image-source: url(img/character-sheet-border2.png);  
+            background-size: cover;
+            left: -130px;
         .stat {
             font-weight: bold;
             width: 25px;
@@ -112,17 +133,14 @@
             margin-top: 5px;
         }
     }
+}
     .sheet-psyque-block {
         margin-top: 40px;
         margin-left: 10px;
-        height: 185px;
-        border-image-slice: 27 27 27 27;
-        border-image-width: 10px 10px 10px 10px;
-        border-image-outset: 0px 0px 0px 0px;
-        border-image-repeat: stretch stretch;
-        border-image-source: url(img/character-sheet-border.png);
-        background-image: url(img/cs-characteristic-background.png);
-        background-position: center;
+        height: 195px;
+        border: 2px solid rgba(157, 145, 121, 0.54);
+        border-radius: 10px;
+        background-color: rgba(157, 145, 121, 0.54);
         background-size: cover;
         width: 230px;
         .characteristic {
@@ -130,6 +148,15 @@
             font-size: large;
             font-weight: bold;
         }
+        .psyque-abilities {
+            border-image-slice: 27 27 27 27;
+            border-image-width: 10px 10px 10px 10px;
+            border-image-outset: 0px 0px 5px 20px;
+            border-image-repeat: stretch stretch;
+            border-image-source: url(img/character-sheet-border2.png);  
+            background-size: cover;
+            left: -130px;
+        
         .stat {
             font-weight: bold;
             width: 25px;
@@ -143,6 +170,8 @@
             font-style: italic;
             margin-top: 5px;
         }
-    }
+            }    
 
+
+}
 }

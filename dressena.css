@@ -102,6 +102,30 @@
   font-style: oblique;
   margin-left: 10px;
 }
+.sheet .sheet-header .level-value {
+  position: absolute;
+  margin-left: 693px;
+  margin-top: -130px;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 50px;
+  background: transparent url("img/cs-level.png") no-repeat center / contain;
+  color: #000000;
+  font-size: xx-large;
+}
+.sheet .sheet-header .role-points {
+  position: absolute;
+  margin-left: 692px;
+  margin-top: -230px;
+  width: 68px;
+  height: 68px;
+  text-align: center;
+  line-height: 50px;
+  background: transparent url("img/cs-role-points.png") no-repeat center / contain;
+  color: #000000;
+  font-size: xx-large;
+}
 .sheet .flex-container {
   background: url(img/character-sheet-background.png);
 }
@@ -232,6 +256,28 @@
   width: 100%;
   position: relative;
   top: -57px;
+}
+.sheet .sheet-body .conditions {
+  width: 470px;
+  position: relative;
+  bottom: -150px;
+  margin-left: 12px;
+  color: #4c4538;
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border.png);
+}
+.sheet .sheet-body .conditions .conditions-title {
+  text-align: center;
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+.sheet .sheet-body .conditions .conditions-images {
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 .sheet .combat-actions {
   top: -50px;
@@ -400,35 +446,36 @@
   grid-template-columns: 240px 240px;
   grid-template-rows: 100px 100px;
   font-style: normal;
-  /* .sheet-physics-block {
-            border-radius: 10px; // Define el radio del borde redondeado según tu preferencia
-            opacity: 0.5; // Aplica la opacidad utilizando la variable definida anteriormente
-            background-color: rgb(157, 145, 121); // Define el color de fondo con una opacidad específica
-    }*/
 }
 .abilities ul {
   list-style-type: none;
 }
 .abilities .sheet-physics-list {
   margin-left: 10px;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
-  background-image: url(img/cs-characteristic-background.png);
-  background-position: center;
+  border: 2px solid rgba(157, 145, 121, 0.54);
+  border-radius: 10px;
+  background-color: rgba(157, 145, 121, 0.54);
   background-size: cover;
   height: 120px;
   width: 230px;
 }
 .abilities .sheet-physics-list .characteristic {
-  margin-left: 60px;
+  margin-left: 55px;
   font-size: large;
   font-weight: bold;
-  margin-bottom: 11px;
 }
-.abilities .sheet-physics-list .stat {
+.abilities .sheet-physics-list .physics-abilities {
+  margin-top: 10px;
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 5px 20px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border2.png);
+  background-size: cover;
+  left: -130px;
+  top: 20px;
+}
+.abilities .sheet-physics-list .physics-abilities .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;
@@ -443,13 +490,9 @@
 }
 .abilities .sheet-finesse-list {
   margin-left: 10px;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
-  background-image: url(img/cs-characteristic-background.png);
-  background-position: center;
+  border: 2px solid rgba(157, 145, 121, 0.54);
+  border-radius: 10px;
+  background-color: rgba(157, 145, 121, 0.54);
   background-size: cover;
   height: 120px;
   width: 230px;
@@ -459,7 +502,16 @@
   font-size: large;
   font-weight: bold;
 }
-.abilities .sheet-finesse-list .stat {
+.abilities .sheet-finesse-list .finesse-abilities {
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 5px 20px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border2.png);
+  background-size: cover;
+  left: -130px;
+}
+.abilities .sheet-finesse-list .finesse-abilities .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;
@@ -475,14 +527,10 @@
 .abilities .sheet-intelect-block {
   margin-top: 40px;
   margin-left: 10px;
-  height: 185px;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
-  background-image: url(img/cs-characteristic-background.png);
-  background-position: center;
+  height: 195px;
+  border: 2px solid rgba(157, 145, 121, 0.54);
+  border-radius: 10px;
+  background-color: rgba(157, 145, 121, 0.54);
   background-size: cover;
   width: 230px;
 }
@@ -491,7 +539,16 @@
   font-size: large;
   font-weight: bold;
 }
-.abilities .sheet-intelect-block .stat {
+.abilities .sheet-intelect-block .intelect-abilities {
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 5px 20px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border2.png);
+  background-size: cover;
+  left: -130px;
+}
+.abilities .sheet-intelect-block .intelect-abilities .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;
@@ -507,14 +564,10 @@
 .abilities .sheet-psyque-block {
   margin-top: 40px;
   margin-left: 10px;
-  height: 185px;
-  border-image-slice: 27 27 27 27;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-  border-image-source: url(img/character-sheet-border.png);
-  background-image: url(img/cs-characteristic-background.png);
-  background-position: center;
+  height: 195px;
+  border: 2px solid rgba(157, 145, 121, 0.54);
+  border-radius: 10px;
+  background-color: rgba(157, 145, 121, 0.54);
   background-size: cover;
   width: 230px;
 }
@@ -523,7 +576,16 @@
   font-size: large;
   font-weight: bold;
 }
-.abilities .sheet-psyque-block .stat {
+.abilities .sheet-psyque-block .psyque-abilities {
+  border-image-slice: 27 27 27 27;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 5px 20px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(img/character-sheet-border2.png);
+  background-size: cover;
+  left: -130px;
+}
+.abilities .sheet-psyque-block .psyque-abilities .stat {
   font-weight: bold;
   width: 25px;
   background-color: transparent;
@@ -587,4 +649,49 @@
   height: 24px;
   line-height: 20px;
   margin: 2px 0;
+}
+.conditions-chat {
+  padding: 0.5rem;
+  border-width: 1px;
+  border-block-end-width: 2px;
+  border-radius: 6px;
+  margin: 5px 0;
+  background-color: #d3550c;
+  text-align: center;
+}
+.conditions-chat .target {
+  font-size: large;
+}
+.conditions-chat .target::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  /* Change this to the color you want */
+  margin-top: 5px;
+  /* Adjust as needed */
+}
+.conditions-chat span {
+  display: block;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #8e0707;
+}
+.conditions-chat .condition {
+  font-size: large;
+  font-style: italic;
+  height: 24px;
+  line-height: 20px;
+  margin: 2px 0;
+}
+.conditions-chat .condition::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  /* Change this to the color you want */
+  margin-top: 5px;
+  /* Adjust as needed */
 }
