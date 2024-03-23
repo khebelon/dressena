@@ -1,0 +1,29 @@
+//Set Character Conditions
+
+/*
+main();
+
+async function main(){
+let actor = canvas.tokens.controlled[0].actor;
+actor.update({"system.conditions.bleeding.value": false});
+actor.update({"system.conditions.massiveDamage.value": false});
+actor.update({"system.conditions.dead.value": false});
+actor.update({"system.conditions.unconscious.value": false});
+
+
+actor.update({"system.health.value": '15'});
+}
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+//Character Progression
+
+/*
+main();
+
+async function main(){
+let actor = canvas.tokens.controlled[0].actor;
+actor._ManageAbilities(actor);
+}
+*/

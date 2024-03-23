@@ -43,7 +43,7 @@ export class dressenaActor extends Actor {
       this._prepareNpcData(actorData);
       this._UpdateDefense(actorData);
       this._ManageCombatActions(actorData);
-      this._ManageAbilities(actorData);
+   //   this._ManageAbilities(actorData);
    //   this._UpdateTraits(actorData);
     }
   
@@ -135,6 +135,7 @@ export class dressenaActor extends Actor {
         armorEquipped = armorData.equipped;
         stealthReduction= armorData.stealthReduction;
       });
+      console.log("ENDURANCE: "+systemData.endurance.value+" AGILITY: "+systemData.agility);
       let newDefense = systemData.endurance.value+systemData.agility+armorBonus;
       actorData.update({"system.defense": newDefense});
 
