@@ -119,6 +119,14 @@ activateListeners(html) {
   html.find(".item-roll").click(this._onItemRoll.bind(this));
   html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
+  html.find(".abilityRoll").click((ev) => {
+    const div = $(ev.currentTarget);
+    const attributeName = div.data("label");
+    const attributeRealName = div.data("name");
+    this._abilityRoll(attributeName, attributeRealName);
+  });
+
+
 ////////////////
 this._contextMenu(html);
 ///////////////
@@ -376,6 +384,51 @@ evalAttack();
 
 }
 
+_abilityRoll(attributeName, attributeRealName) {
+
+
+  const rollAbility = async () => {
+  let abilitymod = 0;
+  if (attributeName == "health") {
+    abilitymod = this.actor.system.health.max;
+  } else if (attributeName == "endurance") {
+    abilitymod = this.actor.system.endurance.max;
+  } else {
+  abilitymod = this.actor.system[attributeName];
+  }
+  let charName = this.actor.name;
+  let charImg = this.actor.img;
+  const abilityMessageTemplate = "systems/dressena/templates/chat/ability-chat.hbs";
+  let abilityFormula = `1d10+${abilitymod}`;
+  let abilityResult = await new Roll(abilityFormula).roll({ async: true });
+  let renderedRoll = await abilityResult.render();
+
+  let templateContext = {
+    charName: charName,
+    charImg: charImg,
+    attributeName: attributeName,
+    attributeRealName: attributeRealName,
+    roll: renderedRoll,
+  }
+
+  let chatData = {
+    user: game.user.id,
+    speaker: ChatMessage.getSpeaker(),
+    roll: abilityResult,
+    content: await renderTemplate(abilityMessageTemplate, templateContext),
+    sound: CONFIG.sounds.dice,
+    type: CONST.CHAT_MESSAGE_TYPES.ROLL
+  }
+
+  ChatMessage.create(chatData);
+}
+
+rollAbility();
+
+}
+
+
+
 _onCombatActionRoll(event) {
   event.preventDefault();
   event.preventDefault();
@@ -443,8 +496,13 @@ _onItemRoll (event) {
   const actorData = this.actor;
 
   if (item.name=="bandage") {
+    let actorEndurance = this.actor.system.endurance.value;
+    if (actorEndurance == 0) return;
+    let newEndurance = this.actor.system.endurance.value-1;
+    this.actor.update({"system.endurance.value": newEndurance});
     let newQuantity= item.system.quantity-1;
     item.update({"system.quantity": newQuantity});
+    
     delay2(100).then(() => useBandage(item, itemID, newQuantity, actorData));
     }
     
@@ -461,6 +519,10 @@ async function useBandage(item, itemID, newQuantity, actorData) {
   if (item.system.quantity==0) {
     item.delete();
   }
+
+
+
+
     const messageTemplate = "systems/dressena/templates/chat/weapon-chat.hbs";
     let actorSurvival = actorData.system.survival;
 

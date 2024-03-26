@@ -50,7 +50,7 @@ export async function ConditionsManager({
     let targetName = targetActor.name;
     let templateContext = {
         flavor: "Massive Damage",
-        description: "You have Massive Damage, roll VOLITION" + volitionCheck + " to clear or fall Unconscious",
+        description: "You have Massive Damage, roll VOLITION " + volitionCheck + " to clear or fall Unconscious",
         targetName: targetName,
       }
     

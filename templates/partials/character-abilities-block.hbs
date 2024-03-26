@@ -4,19 +4,18 @@
             <div class="characteristic"> PHYSICS </div>
             <div class="physics-abilities">
             <li>
-                <a class="rollable" data-roll="d10+{{system.meleeWeaponHandling}}" data-label="Melee Weapon Handling"><i class="fas fa-dice"></i></a>
                 <input class="stat" name="system.meleeWeaponHandling" value="{{system.meleeWeaponHandling}}" data-dtype="Number">
-                {{localize "dressena.ability.meleeWeaponHandling"}}
+                <a class='abilityRoll' data-label="meleeWeaponHandling" data-name="Melee Weapon Handling">{{localize "dressena.ability.meleeWeaponHandling"}}</a>
+                
             </li>
             <li>
-                <a class="rollable" data-roll="d10+{{system.health.max}}" data-label="Health"><i class="fas fa-dice"></i></a>
                 <input class="stat" name="system.health.max" value="{{system.health.max}}" data-dtype="Number">
-                {{localize "dressena.ability.health"}}
+                <a class="abilityRoll" data-label="health" data-name="Health">{{localize "dressena.ability.health"}}</a>
+                
             </li>
             <li>
-                <a class="rollable" data-roll="d10+{{system.endurance.max}}" data-label="Endurance"><i class="fas fa-dice"></i></a>
                 <input class="stat" name="system.endurance.max" value="{{system.endurance.max}}" data-dtype="Number">
-                {{localize "dressena.ability.endurance"}}
+                <a class="abilityRoll" data-label="endurance" data-name="Endurance">{{localize "dressena.ability.endurance"}}</a>              
             </li>
             </div>
             </ul>
@@ -26,25 +25,20 @@
             <div class="characteristic"> FINESSE </div> 
             <div class="finesse-abilities">              
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.rangedWeaponHandling}}" data-label="Ranged Weapon Handling"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.rangedWeaponHandling" value="{{system.rangedWeaponHandling}}" data-dtype="Number">
-                    {{localize "dressena.ability.rangedWeaponHandling"}}
-
+                    <a class="abilityRoll" data-label="rangedWeaponHandling" data-name="Ranged Weapon Handling">{{localize "dressena.ability.rangedWeaponHandling"}}</a>
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.agility}}" data-label="Agility"><i class="fas fa-dice"></i></a>                  
                     <input class="stat" name="system.agility" value="{{system.agility}}" data-dtype="Number">
-                    {{localize "dressena.ability.agility"}}
+                    <a class="abilityRoll" data-label="agility" data-name="Agility">{{localize "dressena.ability.agility"}}</a>                
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.fineMotor}}" data-label="Fine Motor"><i class="fas fa-dice"></i></a>
-                    <input class="stat" name="system.fineMotor" value="{{system.fineMotor}}" data-dtype="Number">
-                    {{localize "dressena.ability.fineMotor"}}
+                    <input class="stat" name="system.fineMotor" value="{{system.fineMotor}}" data-dtype="Number">                    
+                    <a class="abilityRoll" data-label="fineMotor" data-name="Fine Motor">{{localize "dressena.ability.fineMotor"}}</a>                   
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.stealth}}" data-label="Stealth"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.stealth" value="{{system.stealth}}" data-dtype="Number">
-                    {{localize "dressena.ability.stealth"}}
+                    <a class="abilityRoll" data-label="stealth" data-name="Stealth">{{localize "dressena.ability.stealth"}}</a>                    
                 </li>
                 </div>
                 </ul>
@@ -54,39 +48,32 @@
                 <div class="characteristic"> INTELECT </div>
                 <div class="intelect-abilities">
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.exteriorWorld}}" data-label="Exterior World"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.exteriorWorld" value="{{system.exteriorWorld}}" data-dtype="Number">
-                    {{localize "dressena.ability.exteriorWorld"}}
+                    <a class="abilityRoll" data-label="exteriorWorld" data-name="Exterior World">{{localize "dressena.ability.exteriorWorld"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.logic}}" data-label="Logic"><i class="fas fa-dice"></i></a>
-                    <input class="stat" name="system.logic" value="{{system.logic}}" data-dtype="Number">
-                    {{localize "dressena.ability.logic"}}
+                    <input class="stat" name="system.logic" value="{{system.logic}}" data-dtype="Number">  
+                    <a class="abilityRoll" data-label="logic" data-name="Logic">{{localize "dressena.ability.logic"}}</a>                  
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.suggestion}}" data-label="Suggestion"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.suggestion" value="{{system.suggestion}}" data-dtype="Number">
-                    {{localize "dressena.ability.suggestion"}}
+                    <a class="abilityRoll" data-label="suggestion" data-name="Suggestion">{{localize "dressena.ability.suggestion"}}</a>
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.combatStrategy}}" data-label="Combat Strategy"><i class="fas fa-dice"></i></a>
-                    <input class="stat" name="system.combatStrategy" value="{{system.combatStrategy}}" data-dtype="Number">
-                    {{localize "dressena.ability.combatStrategy"}}
+                    <input class="stat" name="system.combatStrategy" value="{{system.combatStrategy}}" data-dtype="Number">                    
+                    <a class="abilityRoll" data-label="combatStrategy" data-name="Combat Strategy">{{localize "dressena.ability.combatStrategy"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.metaphysics}}" data-label="Metaphysics"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.metaphysics" value="{{system.metaphysics}}" data-dtype="Number">
-                    {{localize "dressena.ability.metaphysics"}}
+                    <a class="abilityRoll" data-label="metaphysics" data-name="Metaphysics">{{localize "dressena.ability.metaphysics"}}</a>                   
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.survival}}" data-label="Survival"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.survival" value="{{system.survival}}" data-dtype="Number">
-                    {{localize "dressena.ability.survival"}}
+                    <a class="abilityRoll" data-label="survival" data-name="Survival">{{localize "dressena.ability.survival"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.encyclopedia}}" data-label="Encyclopedia"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.encyclopedia" value="{{system.encyclopedia}}" data-dtype="Number">
-                    {{localize "dressena.ability.encyclopedia"}}
+                    <a class="abilityRoll" data-label="encyclopedia" data-name="Encyclopedia">{{localize "dressena.ability.encyclopedia"}}</a>                    
                 </li>
                 </div>
                 </ul>
@@ -96,39 +83,32 @@
                 <div class="characteristic"> PSYQUE </div>
                 <div class="psyque-abilities">
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.ethics}}" data-label="Ethics"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.ethics" value="{{system.ethics}}" data-dtype="Number">
-                    {{localize "dressena.ability.ethics"}}                 
+                    <a class="abilityRoll" data-label="ethics" data-name="Ethics">{{localize "dressena.ability.ethics"}}</a>                                     
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.painThreshold}}" data-label="Pain Threshold"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.painThreshold" value="{{system.painThreshold}}" data-dtype="Number">
-                    {{localize "dressena.ability.painThreshold"}}
+                    <a class="abilityRoll" data-label="painThreshold" data-name="Pain Threshold">{{localize "dressena.ability.painThreshold"}}</a>
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.valor}}" data-label="Valor"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.valor" value="{{system.valor}}" data-dtype="Number">
-                    {{localize "dressena.ability.valor"}}
+                    <a class="abilityRoll" data-label="valor" data-name="Valor">{{localize "dressena.ability.valor"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.rhetoric}}" data-label="Rhetoric"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.rhetoric" value="{{system.rhetoric}}" data-dtype="Number">
-                    {{localize "dressena.ability.rhetoric"}}
+                    <a class="abilityRoll" data-label="rhetoric" data-name="Rhetoric">{{localize "dressena.ability.rhetoric"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.volition}}" data-label="Volition"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.volition" value="{{system.volition}}" data-dtype="Number">
-                    {{localize "dressena.ability.volition"}}
+                    <a class="abilityRoll" data-label="volition" data-name="Volition">{{localize "dressena.ability.volition"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.authority}}" data-label="Authority"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.authority" value="{{system.authority}}" data-dtype="Number">
-                    {{localize "dressena.ability.authority"}}
+                    <a class="abilityRoll" data-label="authority" data-name="Authority">{{localize "dressena.ability.authority"}}</a>                    
                 </li>
                 <li>
-                    <a class="rollable" data-roll="d10+{{system.occultism}}" data-label="Occultism"><i class="fas fa-dice"></i></a>
                     <input class="stat" name="system.occultism" value="{{system.occultism}}" data-dtype="Number">
-                    {{localize "dressena.ability.occultism"}}
+                    <a class="abilityRoll" data-label="occultism" data-name="Occultism">{{localize "dressena.ability.occultism"}}</a>                    
                 </li>
                 </div>
                 </ul>

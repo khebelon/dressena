@@ -67,7 +67,7 @@
                     <div class="conditions-images">
                     {{#each system.conditions}}
                         {{#if (or (eq this.value true) (gt this.value 0))}}
-                            <a class='condition' data-tooltip='{{this.name}}' data-tooltip-direction="LEFT"><img src='{{this.ico}}' width="40" height="40"></a>
+                            <a class='condition' data-tooltip='{{this.name}}' data-tooltip-direction="LEFT"><img src='{{this.ico}}' width="67" height="58"></a>
                         {{else}}
                         {{/if}}
                     {{/each}}
@@ -120,9 +120,9 @@
                             <div class='item-name'>
                                 <div class='item-image'>
                                     <a class='weapon-roll' title="Damage Roll" data-roll-type='item'>
-                                            <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/> 
+                                            <img src='{{item.img}}' title='{{item.name}}' width='45' height='45'/> 
                                             <span data-tooltip='{{item.system.description}}' data-tooltip-direction="LEFT">
-                                                {{item.name}}
+                                            <span class="weapon-name">  {{item.name}} </span>
                                             </span>
                                     </a>
                                 </div>

@@ -15,7 +15,7 @@ async function preloadHandlebarsTemplates() {
         "systems/dressena/templates/partials/character-abilities-block.hbs",
         "systems/dressena/templates/partials/weapon-card.hbs",
         "systems/dressena/templates/partials/item-effects.hbs",
-        "systems/dressena/templates/partials/character-sheet-sidebar.hbs"
+        "systems/dressena/templates/partials/character-sheet-sidebar.hbs",
     ];
     return loadTemplates(templatePaths);
 };

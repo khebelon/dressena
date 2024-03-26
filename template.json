@@ -44,7 +44,7 @@
                     "massiveDamage": {
                         "name": "Massive Damage", 
                         "value": false,
-                        "ico": "systems/dressena/img/conditions/condition.png"
+                        "ico": "systems/dressena/img/conditions/massivedamage.png"
                     },
                     "unconscious": {
                         "name": "Unconscious",
@@ -64,12 +64,12 @@
                     "disarmed":  {
                         "name": "Disarmed",
                         "value": false,
-                        "ico":"systems/dressena/img/conditions/condition.png"
+                        "ico":"systems/dressena/img/conditions/disarmed.png"
                     },
                     "poisoned":  {
                         "name": "Poisoned",
                         "value": false,
-                        "ico":"systems/dressena/img/conditions/condition.png"
+                        "ico":"systems/dressena/img/conditions/poisoned.png"
                     },
                     "blinded":  {
                         "name": "Blinded",
@@ -99,12 +99,12 @@
                     "burned":  {
                         "name": "Burned",
                         "value": false,
-                        "ico":"systems/dressena/img/conditions/condition.png"
+                        "ico":"systems/dressena/img/conditions/burned.png"
                     },
                     "frozen":  {
                         "name":"Frozen",
                         "value": false,
-                        "ico":"systems/dressena/img/conditions/condition.png"
+                        "ico":"systems/dressena/img/conditions/frozen.png"
                     }
                 }
             }

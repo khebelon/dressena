@@ -1,0 +1,15 @@
+* [DONE] Make Character progression skeleton in actor.js (maybe in prepareDerivedData() ? )
+* Refactor Traits for containing Traits Points
+* Add Nutrition Points
+* Complete Compendium (class traits)
+* Crafting system?
+* Progression bar for Health (green/light grey/dark grey/black)
+* Use of ammunition (arrow - bow) and fix quantity on item.js
+* Create special combat actions in RED for fixing states like massive damage or bleeding.
+* Split class traits and general traits
+* [DONE] Bandage to consume 1 Endurance in Combat
+* Imperial Docs
+* [DONE] Remove fa-dice from abilities and make them functions in dressenaCharacterSheet.js (and make CCS for chat)
+* Fix effect layout on window (broken)
+* Add in Sheet: Specie, Rest, Nutrition, Kei's
+* Multiples Armors included shield, "equipped" button.
